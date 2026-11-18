@@ -12,7 +12,7 @@ CATALOGUE = [
         "description": "20T · Heavy digging & trenches",
         "rate": 1850.0,
         "provider_id": "provider-1",
-        "image": "/assets/machinery/excavator.svg",
+        "image": "/assets/machinery/excavator.jpg",
     },
     {
         "id": "eq-2",
@@ -21,7 +21,7 @@ CATALOGUE = [
         "description": "Loader + Backhoe multi-use",
         "rate": 1450.0,
         "provider_id": "provider-1",
-        "image": "/assets/machinery/backhoe.svg",
+        "image": "/assets/machinery/backhoe.jpg",
     },
     {
         "id": "eq-3",
@@ -30,7 +30,7 @@ CATALOGUE = [
         "description": "Muck & debris haulage",
         "rate": 1100.0,
         "provider_id": "provider-1",
-        "image": "/assets/machinery/tipper.svg",
+        "image": "/assets/machinery/tipper.jpg",
     },
     {
         "id": "eq-4",
@@ -39,7 +39,7 @@ CATALOGUE = [
         "description": "11T Vibratory roller",
         "rate": 1150.0,
         "provider_id": "provider-1",
-        "image": "/assets/machinery/compactor.svg",
+        "image": "/assets/machinery/compactor.jpg",
     },
     {
         "id": "eq-5",
@@ -48,7 +48,7 @@ CATALOGUE = [
         "description": "6 cu.m RMC Batching",
         "rate": 1250.0,
         "provider_id": "provider-1",
-        "image": "/assets/machinery/mixer.svg",
+        "image": "/assets/machinery/mixer.jpg",
     },
     {
         "id": "eq-6",
@@ -57,7 +57,7 @@ CATALOGUE = [
         "description": "14T Girder & Precast Lift",
         "rate": 2150.0,
         "provider_id": "provider-1",
-        "image": "/assets/machinery/crane.svg",
+        "image": "/assets/machinery/crane.jpg",
     },
 ]
 

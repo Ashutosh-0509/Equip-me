@@ -19,7 +19,7 @@ export default function ContractorBookingWizard({
       description: 'Loader + Backhoe · 1.2 m³ bucket',
       rate: 1450,
       quantity: 2,
-      image: '/assets/machinery/backhoe.svg',
+      image: '/assets/machinery/backhoe.jpg',
     }
   );
 
