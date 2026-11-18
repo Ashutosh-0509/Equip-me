@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BMC Heavy Equipment - Live Booking Execution</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#f2f0f0",
+            "primary-fixed": "#ffdeac",
+            "surface": "#fbf9f8",
+            "on-secondary-fixed-variant": "#474649",
+            "surface-tint": "#7e5700",
+            "on-primary-container": "#6b4900",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#e4e2e2",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#c8c6c8",
+            "inverse-primary": "#ffba35",
+            "stroke-card": "#E5E5EA",
+            "status-success": "#1E9E5A",
+            "surface-container": "#efeded",
+            "background": "#fbf9f8",
+            "on-secondary-container": "#636264",
+            "outline": "#847560",
+            "on-secondary-fixed": "#1b1b1d",
+            "on-surface-variant": "#514532",
+            "status-warning": "#E67E22",
+            "on-error": "#ffffff",
+            "tertiary-container": "#c1c2c2",
+            "on-primary-fixed": "#281900",
+            "on-error-container": "#93000a",
+            "tertiary": "#5d5f5f",
+            "tertiary-fixed": "#e2e2e2",
+            "status-error": "#D93025",
+            "text-primary": "#1C1C1E",
+            "surface-card": "#F5F5F5",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-primary-fixed-variant": "#5f4100",
+            "secondary-container": "#e2dfe1",
+            "outline-variant": "#d6c4ac",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#e4e2e2",
+            "primary-fixed-dim": "#ffba35",
+            "surface-dim": "#dbdad9",
+            "surface-base": "#FFFFFF",
+            "secondary": "#5f5e60",
+            "on-background": "#1b1c1c",
+            "on-tertiary-fixed": "#1a1c1c",
+            "text-muted": "#6B6B6B",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#e9e8e7",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3f3",
+            "status-info": "#2563EB",
+            "primary-container": "#ffb400",
+            "on-tertiary": "#ffffff",
+            "primary": "#7e5700",
+            "on-tertiary-container": "#4e5050",
+            "surface-bright": "#fbf9f8",
+            "on-tertiary-fixed-variant": "#454747",
+            "inverse-surface": "#303031",
+            "secondary-fixed": "#e4e2e4",
+            "on-surface": "#1b1c1c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "button-text": ["Noto Sans"],
+            "headline-md": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "display-code": ["Noto Sans"],
+            "label-sm": ["Noto Sans"],
+            "headline-lg": ["Noto Sans"],
+            "title-sm": ["Noto Sans"]
+          },
+          "fontSize": {
+            "button-text": ["18px", {"lineHeight": "24px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+            "label-md": ["14px", {"lineHeight": "18px", "fontWeight": "500"}],
+            "display-code": ["36px", {"lineHeight": "44px", "letterSpacing": "4px", "fontWeight": "700"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.2px", "fontWeight": "700"}],
+            "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-text-primary">
+<!-- Mobile Shell Wrapper (360-390px targeting) -->
+<div class="w-full max-w-md min-h-screen bg-surface-base flex flex-col relative pb-24 shadow-sm">
+<!-- Screen Header (TopAppBar aligned with active execution context) -->
+<header class="sticky top-0 z-40 bg-surface shadow-sm flex items-center justify-between h-16 px-gutter">
+<div class="flex items-center gap-space-sm">
+<button aria-label="Back" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-transform text-text-primary" type="button">
+<span class="material-symbols-outlined text-headline-md">arrow_back</span>
+</button>
+<div>
+<span class="text-label-sm font-bold text-text-primary block leading-none">ORDER ID</span>
+<h1 class="text-title-sm font-title-sm text-text-primary tracking-tight">#BMC-8842-JCB</h1>
+</div>
+</div>
+<div class="relative">
+<button aria-label="Booking Options" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-transform text-text-primary" id="menu-btn" onclick="toggleMenu()" type="button">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+<!-- Dropdown Menu -->
+<div class="hidden absolute right-0 mt-2 w-48 bg-surface-base rounded-xl shadow-lg border border-stroke-card py-1 z-50" id="kebab-menu">
+<button class="w-full px-space-md py- space-sm text-left text-label-md font-label-md text-text-primary hover:bg-surface-container flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-status-warning text-label-md">report_problem</span>
+            Report Problem
+          </button>
+<button class="w-full px-space-md py-space-sm text-left text-label-md font-label-md text-status-error hover:bg-surface-container flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-status-error text-label-md">cancel</span>
+            Cancel Booking
+          </button>
+</div>
+</div>
+</header>
+<!-- Operational State Banner (Safety Green Accent) -->
+<section class="bg-status-success text-on-primary px-gutter py-3 shadow-sm"><div class="flex items-center gap-3">
+<div class="bg-surface-base text-status-success rounded-full w-7 h-7 flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-body-lg font-bold" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+</div>
+<div class="flex-1">
+<h2 class="text-body-lg font-bold leading-tight text-on-primary">Operator Arrived at Site</h2>
+<p class="text-label-sm font-normal opacity-95 mt-0.5">Hand over the start verification code below to begin work.</p>
+</div>
+</div></section>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-gutter py-space-md flex flex-col gap-3"><!-- Central Security Start Code Card (PIN Verification as Primary Centerpiece) -->
+<section class="bg-surface-base rounded-2xl p-5 border border-primary-container shadow-sm flex flex-col items-center text-center">
+
+<h2 class="text-title-sm font-bold text-text-primary">Verify Arrival PIN</h2>
+<p class="text-label-md text-secondary mt-1 max-w-[280px]">Share this 4-digit code with operator Ramesh Solanki to begin the municipal shift.</p>
+<!-- 4-Digit Display Cells -->
+<div class="flex items-center justify-center gap-3 my-5">
+<div class="w-14 h-16 rounded-xl border-2 border-primary-container bg-surface flex items-center justify-center shadow-sm">
+<span class="text-display-code font-bold text-text-primary">8</span>
+</div>
+<div class="w-14 h-16 rounded-xl border-2 border-primary-container bg-surface flex items-center justify-center shadow-sm">
+<span class="text-display-code font-bold text-text-primary">4</span>
+</div>
+<div class="w-14 h-16 rounded-xl border-2 border-primary-container bg-surface flex items-center justify-center shadow-sm">
+<span class="text-display-code font-bold text-text-primary">2</span>
+</div>
+<div class="w-14 h-16 rounded-xl border-2 border-primary-container bg-surface flex items-center justify-center shadow-sm">
+<span class="text-display-code font-bold text-text-primary">9</span>
+</div>
+</div>
+<!-- Primary CTA Button -->
+<button class="w-full h-14 bg-primary-container hover:bg-primary-container/90 active:scale-95 transition-transform text-text-primary font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm text-body-lg" type="button">
+<span class="material-symbols-outlined text-headline-md">play_circle</span>
+    Confirm &amp; Start Work
+  </button>
+
+</section>
+<!-- Equipment & Operator Information Card -->
+<section class="bg-surface-base rounded-2xl p-4 border border-stroke-card shadow-sm flex flex-col divide-y divide-stroke-card">
+<!-- Equipment Row -->
+<div class="flex items-center justify-between pb-3.5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-headline-md">precision_manufacturing</span></div>
+<div>
+<h3 class="text-body-lg font-bold text-text-primary leading-tight">JCB 3DX Heavy Loader</h3>
+
+</div>
+</div>
+
+</div>
+<!-- Operator Row -->
+<div class="flex items-center justify-between pt-3.5">
+<div class="flex items-center gap-3">
+
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="text-body-lg font-bold text-text-primary leading-none">Ramesh Solanki</h4>
+
+</div>
+
+</div>
+</div>
+<a aria-label="Call Operator" class="h-10 px-3.5 rounded-full bg-surface-container hover:bg-surface-container-high text-text-primary flex items-center gap-1.5 font-bold text-label-sm border border-stroke-card active:scale-95 transition-transform shrink-0" href="tel:+919876543210">
+<span class="material-symbols-outlined text-body-lg" style="font-variation-settings: &quot;FILL&quot; 1;">call</span>
+<span>Call</span>
+</a>
+</div>
+</section>
+<!-- Work Order Details & Timeline Card -->
+
+<!-- Subtle Report Issue Action -->
+</main>
+<!-- Bottom Navigation Bar (Docked Shared Component) -->
+<!-- Screen represents Bookings context; Bookings tab is strictly highlighted as active -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-gutter bg-surface dark:bg-inverse-surface shadow-md dark:shadow-none max-w-md mx-auto">
+<!-- Home Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed font-label-sm hover:text-primary dark:hover:text-inverse-primary active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-headline-md" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</button>
+<!-- Bookings Tab (Active Lock) -->
+<button class="flex flex-col items-center justify-center text-on-surface dark:text-inverse-on-surface font-title-sm active:scale-95 transition-transform duration-150 relative" type="button">
+<span class="material-symbols-outlined text-headline-md text-text-primary" data-icon="calendar_month" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_month</span>
+<span class="text-label-sm font-title-sm text-text-primary mt-0.5 font-bold">Bookings</span>
+<span class="w-1 h-1 rounded-full bg-primary-container absolute -bottom-1"></span>
+</button>
+<!-- Profile Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed font-label-sm hover:text-primary dark:hover:text-inverse-primary active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-headline-md" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</button>
+</nav>
+</div>
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('kebab-menu');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+      } else {
+        menu.classList.add('hidden');
+      }
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('kebab-menu');
+      if (!btn.contains(event.target) && !menu.contains(event.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BMC Officer Dashboard - Ward G/N Control Room</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#FFB400',
+              secondary: '#1C1C1E',
+              bg: '#F5F5F5',
+              surface: '#FFFFFF',
+              muted: '#6B6B6B',
+              border: '#E5E7EB',
+              green: '#1E9E5A',
+              red: '#D93025',
+              amber: '#E67E22',
+            }
+          },
+          fontFamily: {
+            sans: ['Noto Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-[#F5F5F5] text-[#1C1C1E] min-h-screen flex justify-center">
+<!-- Mobile Viewport Container (Target 390px-420px max) -->
+<div class="w-full max-w-md bg-[#F5F5F5] min-h-screen flex flex-col relative shadow-sm pb-20">
+<!-- 1. COMPACT HEADER & IDENTITY -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-30 px-4 py-2.5">
+<!-- Top Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<!-- BMC Emblem / Municipal Icon -->
+<div class="w-8 h-8 rounded-lg bg-[#1C1C1E] text-[#FFB400] flex items-center justify-center shrink-0 shadow-sm">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<div class="text-[13px] font-bold tracking-tight text-[#1C1C1E] leading-none">Ward G/N Control Room</div>
+
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Compact Language Switch -->
+
+<!-- Notification Bell with Dot -->
+
+</div>
+</div>
+<!-- Compact Identity Card -->
+<div class="mt-2.5 pt-2.5 border-t border-gray-100 flex items-center justify-between">
+<div>
+<div class="text-[13px] font-bold text-[#1C1C1E] leading-tight">Er. Amit Deshmukh</div>
+
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-full text-[11px] font-bold text-[#1C1C1E] transition-colors">
+<span>Ward G/North (Dharavi)</span>
+<svg class="w-3.5 h-3.5 text-[#6B6B6B]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Live Duty Bar -->
+
+</header>
+<!-- MAIN SCROLLABLE CONTENT -->
+<main class="flex-1 px-3.5 pt-3 space-y-3.5">
+<!-- 2. EXCEPTIONS FIRST ALERT -->
+<div class="bg-[#FEF2F2] border-l-[3px] border-[#D93025] rounded-r-lg px-3 py-2.5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D93025] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#D93025]"></span>
+</span>
+<p class="text-[12px] font-semibold text-[#1C1C1E] leading-snug">
+            5 tasks require immediate municipal intervention
+          </p>
+</div>
+<button class="text-[11px] font-bold text-[#D93025] hover:underline whitespace-nowrap pl-2 flex items-center">View All</button>
+</div>
+<!-- 3. OPERATIONAL METRICS (2x2 Clean Grid) -->
+<section>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] font-bold text-[#6B6B6B] tracking-wider uppercase">Operational Pulse</span>
+<span class="text-[11px] text-[#6B6B6B]">Updated 2m ago</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Tile 1: Waiting Approval -->
+<div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[12px] font-semibold text-[#6B6B6B]">Waiting Approval</span>
+
+</div>
+<div class="text-[24px] font-bold text-[#1C1C1E] my-1 leading-none">4</div>
+
+</div>
+<!-- Tile 2: Not Matched -->
+<div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[12px] font-semibold text-[#6B6B6B]">Not Matched</span>
+
+</div>
+<div class="text-[24px] font-bold text-[#D93025] my-1 leading-none">2</div>
+
+</div>
+<!-- Tile 3: Active Today -->
+<div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[12px] font-semibold text-[#6B6B6B]">Active Today</span>
+
+</div>
+<div class="text-[20px] font-bold text-[#1C1C1E] my-1 leading-none">18</div>
+<div class="text-[11px] font-medium text-[#6B6B6B]">14 JCBs + 4 Excavators</div>
+</div>
+<!-- Tile 4: Problems Open -->
+<div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[12px] font-semibold text-[#6B6B6B]">Problems Open</span>
+
+</div>
+<div class="text-[20px] font-bold text-[#1C1C1E] my-1 leading-none">1</div>
+<div class="text-[11px] font-medium text-[#D93025]">Breakdown reported</div>
+</div>
+</div>
+</section>
+<!-- 4. "NEEDS YOU NOW" PRIORITY ACTIONS (3 Clean Task Cards) -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="text-[14px] font-bold text-[#1C1C1E]">Needs You Now</h2>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#D93025] text-white">5 Urgent</span>
+</div>
+
+</div>
+<!-- Task 1 (Approval Required) -->
+<article class="bg-white rounded-xl border border-gray-200 p-3.5 shadow-sm space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold bg-[#FFB400]/20 text-[#1C1C1E]">
+<svg class="w-3.5 h-3.5 text-[#E67E22]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+              Approval Timeout: 14m Left
+            </span>
+<span class="text-[12px] font-bold text-[#1C1C1E]">₹23,200</span>
+</div>
+<div>
+<h3 class="text-[13px] font-bold text-[#1C1C1E] leading-snug">Storm Water Drain Widening</h3>
+<p class="text-[11px] text-[#6B6B6B] mt-0.5 font-medium leading-relaxed">
+              2x JCB 3DX Backhoe Loader • Sharma Infra &amp; Co. • Tomorrow 8:00 AM
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1"><button class="h-11 px-3 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-[#1C1C1E] text-[12px] font-bold transition-colors flex items-center justify-center">Review Details</button><button class="h-11 px-3 rounded-lg bg-[#FFB400] hover:bg-[#ffbe1a] text-[#1C1C1E] text-[12px] font-bold flex items-center justify-center gap-1.5 shadow-sm transition-colors"><svg class="w-4 h-4 text-[#1C1C1E]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>Approve (1-Tap)</button></div>
+</article>
+<!-- Task 2 (Provider Unavailable) -->
+
+<!-- Task 3 (Machine Breakdown) -->
+
+</section>
+<!-- 5. WARD PERFORMANCE SUMMARY -->
+
+</main>
+<!-- 6. DOCKED BOTTOM NAVIGATION (4 Tabs) -->
+<nav class="bg-white border-t border-gray-200 fixed bottom-0 left-0 right-0 z-40 max-w-md mx-auto flex items-center justify-around h-16 pb-safe px-2 shadow-[0_-2px_10px_rgba(0,0,0,0.04)]">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-[#1C1C1E] transition-colors" href="#">
+<svg class="w-5 h-5 text-[#1C1C1E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-bold mt-1">Dashboard</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#FFB400] mt-0.5"></span>
+</a>
+<!-- Requests -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-[#6B6B6B] hover:text-[#1C1C1E] transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">Requests</span>
+<span class="w-1.5 h-1.5 opacity-0 mt-0.5"></span>
+</a>
+<!-- Providers -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-[#6B6B6B] hover:text-[#1C1C1E] transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">Providers</span>
+<span class="w-1.5 h-1.5 opacity-0 mt-0.5"></span>
+</a>
+<!-- More -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-[#6B6B6B] hover:text-[#1C1C1E] transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium mt-1">More</span>
+<span class="w-1.5 h-1.5 opacity-0 mt-0.5"></span>
+</a>
+</nav>
+</div>
+
+
+
+
+
+
+
+
+</body></html>

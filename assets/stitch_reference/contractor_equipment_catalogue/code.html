@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BMC Heavy Logix - Contractor Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#FFB400",
+            "primary-dark": "#E5A000",
+            "primary-light": "#FFF7E6",
+            "secondary": "#1C1C1E",
+            "background": "#F8F9FA",
+            "surface": "#FFFFFF",
+            "surface-subtle": "#F5F5F7",
+            "text-primary": "#1C1C1E",
+            "text-secondary": "#6B7280",
+            "text-muted": "#9CA3AF",
+            "border-subtle": "#E5E7EB",
+            "status-green": "#16A34A",
+            "status-green-light": "#DCFCE7"
+          },
+          fontFamily: {
+            sans: ["Noto Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20;
+    }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      background-color: #F8F9FA;
+    }
+  </style>
+<meta content="mobile_tab" name="shell-type"></head>
+<body class="bg-background text-text-primary antialiased min-h-screen">
+<!-- Mobile Application Container -->
+<div class="w-full max-w-md mx-auto min-h-screen bg-background flex flex-col relative pb-24 border-x border-border-subtle/80">
+<!-- Compact Top Bar Header -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-border-subtle px-4 py-2.5">
+<div class="flex items-center justify-between">
+<!-- Brand Wordmark -->
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-secondary text-primary flex items-center justify-center font-bold text-xs tracking-wider shadow-xs">
+            HL
+          </div>
+<span class="text-xs font-bold tracking-tight text-text-primary">BMC HEAVYLOGIX</span>
+</div>
+<!-- Top Right Actions -->
+<div class="flex items-center gap-2">
+<!-- Language Selector -->
+<!-- Notifications Bell -->
+</div>
+</div>
+<!-- Integrated Contractor Identity Strip -->
+<div class="mt-2.5 pt-2 border-t border-border-subtle/60 flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+
+
+</div>
+
+</div>
+</header>
+<!-- Main Content Stream -->
+<main class="flex-1 px-4 pt-3 space-y-4"><div class="flex flex-col w-full pb-28">
+<!-- Search & Tactical Machinery Filter Bar -->
+<section class="w-full mb-3">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-10 bg-surface-container rounded-xl text-on-surface placeholder:text-secondary text-sm font-medium focus:outline-none focus:bg-surface-container-low transition-all" id="equipmentSearchInput" placeholder="Search machinery, tonnage (e.g. 20T, JCB)..." type="search">
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+</div>
+</section>
+<!-- Horizontal Scrollable Category Chips -->
+<section class="w-full mb-4">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="filter-chip active shrink-0 px-3.5 py-1.5 rounded-full text-xs font-bold bg-primary-container text-on-primary-container shadow-xs transition-transform active:scale-95 flex items-center gap-1.5" data-filter="all" type="button">
+<span>All</span>
+<span class="w-4 h-4 rounded-full bg-on-primary-container/15 flex items-center justify-center text-[10px]">6</span>
+</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-secondary transition-transform active:scale-95 flex items-center gap-1.5" data-filter="earthmoving" type="button">
+<span>Earthmoving</span>
+<span class="w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center text-[10px]">2</span>
+</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-secondary transition-transform active:scale-95 flex items-center gap-1.5" data-filter="haulage" type="button">
+<span>Haulage</span>
+<span class="w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center text-[10px]">1</span>
+</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-secondary transition-transform active:scale-95 flex items-center gap-1.5" data-filter="compaction" type="button">
+<span>Compaction &amp; RMC</span>
+<span class="w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center text-[10px]">2</span>
+</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-secondary transition-transform active:scale-95 flex items-center gap-1.5" data-filter="cranes" type="button">
+<span>Cranes</span>
+<span class="w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center text-[10px]">1</span>
+</button>
+</div>
+</section>
+<!-- Live Deployment & Depot Status Pill -->
+
+<!-- 6-Item Catalogue Grid (Strict 2-Column Industrial Tiles) -->
+<section class="grid grid-cols-2 gap-3 w-full" id="equipmentGrid">
+<!-- Item 1: Heavy Excavator -->
+<article class="equipment-card rounded-2xl p-2.5 flex flex-col justify-between shadow-xs transition-all duration-200 bg-primary-container/10" data-category="earthmoving" data-id="eq-1" data-name="Heavy Excavator" data-rate="1850">
+<div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-surface-container-highest mb-2.5">
+<img alt="BMC Heavy Excavator 20T deployed in Mumbai construction zone" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxODQnmf-_a6axH59jg-14YDySxIbycVMUIN7SRi2R5rZtDoM4cNRiyOgLkIsRzWIraLJSeAUHq0gE-42xsIRw9NV65FkSl0HF3b9ByHv5jvw-0w0yK4wwCBF5ICU3GSzYAFMOhaTrn5KpG_Ax58-l_Pb0dhDDmPFP2QpnWl_PP0BwpBqI9D_sA1gPkB_79McpnEmNF_N2wvSwuCIP3G9Yd52pNUxLID-6tyk4yv8vqbufIyfq-j4">
+
+
+</div>
+<h3 class="text-sm font-bold text-on-surface line-clamp-1 leading-snug">Heavy Excavator</h3>
+<p class="text-[11px] text-secondary line-clamp-1 font-medium mt-0.5">Heavy digging &amp; trenches</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/60 rounded-lg p-1.5 flex items-center justify-between">
+<div>
+
+<span class="text-xs font-bold text-on-surface">₹1,850<span class="text-[10px] font-normal text-secondary">/hr</span></span>
+</div>
+<button class="eq-btn px-3 py-1.5 rounded-lg text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-1 bg-primary-container text-on-primary-container" onclick="toggleEquipment('eq-1', 'Heavy Excavator', 1850, this)" type="button"><span class="material-symbols-outlined text-[14px]">check</span><span>Added</span></button>
+</div>
+</article>
+<!-- Item 2: JCB 3DX Backhoe -->
+<article class="equipment-card bg-surface-container rounded-2xl p-2.5 flex flex-col justify-between shadow-xs transition-all duration-200" data-category="earthmoving" data-id="eq-2" data-name="JCB 3DX Backhoe" data-rate="1250">
+<div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-surface-container-highest mb-2.5">
+<img class="w-full h-full object-cover object-center" data-alt="Yellow JCB 3DX backhoe loader parked on a city civil works site in daytime, high contrast industrial equipment photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlnSwNa5hpT93V59TjeNyCMTX1Xfzh5VqKvKcaqKx9M8PlyuXdGVNA-MQd-2dY39st7o7YtBCVP7hrBHJoMbtxdjwYNBZXTTzmzh7nX69-q9wrOQutK9yqzt9cp97HbU9o1o6a7uEnNqdwEfUCvdQgdmex-qjZGWiqNPCCH5-IUBEPycOfQBw6mK8T3xhMDG4pnWsRv3sR6qf-nYEbfm_ArmYcLGx7Zq7aJuBLvA">
+
+
+</div>
+<h3 class="text-sm font-bold text-on-surface line-clamp-1 leading-snug">JCB 3DX Backhoe</h3>
+<p class="text-[11px] text-secondary line-clamp-1 font-medium mt-0.5">Loader + Backhoe multi-use</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/60 rounded-lg p-1.5 flex items-center justify-between">
+<div>
+
+<span class="text-xs font-bold text-on-surface">₹1,250<span class="text-[10px] font-normal text-secondary">/hr</span></span>
+</div>
+<button class="eq-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-1" onclick="toggleEquipment('eq-2', 'JCB 3DX Backhoe', 1250, this)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</article>
+<!-- Item 3: 16-Ton Tipper -->
+<article class="equipment-card bg-surface-container rounded-2xl p-2.5 flex flex-col justify-between shadow-xs transition-all duration-200" data-category="haulage" data-id="eq-3" data-name="16-Ton Tipper" data-rate="1450">
+<div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-surface-container-highest mb-2.5">
+<img class="w-full h-full object-cover object-center" data-alt="Heavy commercial 10 wheeler dump truck tipper with yellow cabin and steel body for civil muck removal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6pCbpqficl0E3CtSSd9pGjLpuLdKgCgsUM0sL2KaW0bOCZx65TdgKuuHkUdKqdDVuRRdj5maD3disW_7xitCYdAaVCEWlQSJAzYHvaZu4NySSuo673Oo8FoSt_d2SL9Mhayfr-0RNsiMbT3DKGHVpqKx_E5UbOQWzQWNL_s3fl6zneSoAFp-VQqC6J8Cn3QF-2FvYpy3GugHlDzHuYN_sp9FxP1WDGLEhhX-p6g">
+
+
+</div>
+<h3 class="text-sm font-bold text-on-surface line-clamp-1 leading-snug">16-Ton Tipper</h3>
+<p class="text-[11px] text-secondary line-clamp-1 font-medium mt-0.5">Muck &amp; debris haulage</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/60 rounded-lg p-1.5 flex items-center justify-between">
+<div>
+
+<span class="text-xs font-bold text-on-surface">₹1,450<span class="text-[10px] font-normal text-secondary">/hr</span></span>
+</div>
+<button class="eq-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-1" onclick="toggleEquipment('eq-3', '16-Ton Tipper', 1450, this)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</article>
+<!-- Item 4: Soil Compactor -->
+<article class="equipment-card bg-surface-container rounded-2xl p-2.5 flex flex-col justify-between shadow-xs transition-all duration-200" data-category="compaction" data-id="eq-4" data-name="Soil Compactor" data-rate="1150">
+<div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-surface-container-highest mb-2.5">
+<img class="w-full h-full object-cover object-center" data-alt="Vibratory single drum asphalt and soil compactor road roller painted high-vis yellow on road base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyTX5SyMqsdOSH2Sn6I1pmqqk1XuP7yI2XAo9JcBy5mdzpJpJDlzIxSDb2WL7Bo2P24dqU6M9LXMWbdp4nlUaN6UuzsAPVnLyTaPv2aMp8zoK9ZmLAJyoskduyESApQ2jQGIhBY4cuh3KZn83nUBtHYNrSBsIaY4pzhLvvzSHtynYlAz6p7G3cEb7g2oBOUqnF8qJ_kHJzox6QVzUtZ27CLMcLna9caVlXl-hvFg">
+
+
+</div>
+<h3 class="text-sm font-bold text-on-surface line-clamp-1 leading-snug">Soil Compactor</h3>
+<p class="text-[11px] text-secondary line-clamp-1 font-medium mt-0.5">11T Vibratory roller</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/60 rounded-lg p-1.5 flex items-center justify-between">
+<div>
+
+<span class="text-xs font-bold text-on-surface">₹1,150<span class="text-[10px] font-normal text-secondary">/hr</span></span>
+</div>
+<button class="eq-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-1" onclick="toggleEquipment('eq-4', 'Soil Compactor', 1150, this)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</article>
+<!-- Item 5: Transit Mixer -->
+<article class="equipment-card bg-surface-container rounded-2xl p-2.5 flex flex-col justify-between shadow-xs transition-all duration-200" data-category="compaction" data-id="eq-5" data-name="Transit Mixer" data-rate="1700">
+<div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-surface-container-highest mb-2.5">
+<img class="w-full h-full object-cover object-center" data-alt="Ready mix concrete batching transit mixer truck with rotating drum on concrete slab site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsdg-bu4_R20NmKzGy_qGMgVzM_yudhg0SuaBBIEz0uZxcOV6rLzExvuTWLDkocDQ12yEu2FN3IL6HosbCLzwye2_utl1MnFFVx_3mMcjaNe0dQldz2UAgGmNh54IVUcJzcN_RnExaPuLr3UO65zd8abhTYSIUvGuL-uNqtpkK4veXhpE-5m6QbfQXJ41oL0oaaioPSSWE7fVOMVp-bseNdg-xjeamKGeeQh48lw">
+
+
+</div>
+<h3 class="text-sm font-bold text-on-surface line-clamp-1 leading-snug">Transit Mixer</h3>
+<p class="text-[11px] text-secondary line-clamp-1 font-medium mt-0.5">6 cu.m RMC Batching</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/60 rounded-lg p-1.5 flex items-center justify-between">
+<div>
+
+<span class="text-xs font-bold text-on-surface">₹1,700<span class="text-[10px] font-normal text-secondary">/hr</span></span>
+</div>
+<button class="eq-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-1" onclick="toggleEquipment('eq-5', 'Transit Mixer', 1700, this)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</article>
+<!-- Item 6: Hydra Crane -->
+<article class="equipment-card bg-surface-container rounded-2xl p-2.5 flex flex-col justify-between shadow-xs transition-all duration-200" data-category="cranes" data-id="eq-6" data-name="Hydra Crane" data-rate="2100">
+<div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-surface-container-highest mb-2.5">
+<img class="w-full h-full object-cover object-center" data-alt="Hydraulic mobile pick and carry hydra crane with telescoping boom lifting heavy girder on urban flyover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMpkrAgFIa8g0lhMZIffe0zEsi2-_47b0CYbgQ5YVzaMuZ7jlQyRdyCNO4HnKriNwo3IHGqqmyeRcClgriu_x2pvoLkuWVxc134efly8kpEuZ2L8EGN9lj-r56SVnXq9fYE-e7EM1YfLGOtQWWr7bY4NkGXSIxxWMXi-35mqG8kmikF8R5DUIT2gxrmQ0jNG2oSiUkpPxdTt4wK90r3UdqBIFcSZr4jD24jUB6BA">
+
+
+</div>
+<h3 class="text-sm font-bold text-on-surface line-clamp-1 leading-snug">Hydra Crane</h3>
+<p class="text-[11px] text-secondary line-clamp-1 font-medium mt-0.5">14T Girder &amp; Precast Lift</p>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/60 rounded-lg p-1.5 flex items-center justify-between">
+<div>
+
+<span class="text-xs font-bold text-on-surface">₹2,100<span class="text-[10px] font-normal text-secondary">/hr</span></span>
+</div>
+<button class="eq-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center gap-1" onclick="toggleEquipment('eq-6', 'Hydra Crane', 2100, this)" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Industrial Municipal Assurance Banner -->
+
+<!-- Docked Bottom Requisition Tray (Above bottom nav bar) -->
+<div class="fixed bottom-16 left-0 right-0 max-w-md mx-auto px-4 z-40 transition-all duration-300 transform translate-y-0" id="requisitionTray">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-3 shadow-xl flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2 min-w-0">
+
+<span class="text-xs font-bold truncate" id="trayTitleText">1 Equipment selected</span>
+</div>
+<div class="text-right shrink-0">
+
+</div>
+</div>
+<!-- Action Button 56px Industrial Height -->
+<button class="w-full h-14 rounded-xl bg-primary-container text-on-primary-container text-base font-bold flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform" id="proceedBookingBtn" type="button">
+<span>Proceed to Booking Step 1</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const selectedEquipment = new Map();
+    // Default preset 1 equipment selected as requested in spec
+    selectedEquipment.set('eq-1', { name: 'Heavy Excavator', rate: 1850 });
+
+    const tray = document.getElementById('requisitionTray');
+    const trayCountBadge = document.getElementById('trayCountBadge');
+    const trayTitleText = document.getElementById('trayTitleText');
+    const trayRateText = document.getElementById('trayRateText');
+    const cards = document.querySelectorAll('.equipment-card');
+    const searchInput = document.getElementById('equipmentSearchInput');
+    const filterChips = document.querySelectorAll('.filter-chip');
+
+    // Sync initial preselected item card UI
+    function initDefaultSelection() {
+      const card1 = document.querySelector('[data-id="eq-1"]');
+      if (card1) {
+        card1.classList.remove('bg-surface-container');
+        card1.classList.add('bg-primary-container/10');
+        const btn = card1.querySelector('.eq-btn');
+        if (btn) {
+          btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          btn.classList.add('bg-primary-container', 'text-on-primary-container');
+          btn.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>Added</span>';
+        }
+      }
+      updateTray();
+    }
+
+    window.toggleEquipment = function (id, name, rate, btnElement) {
+      const card = btnElement.closest('.equipment-card');
+      
+      if (selectedEquipment.has(id)) {
+        selectedEquipment.delete(id);
+        card.classList.remove('bg-primary-container/10');
+        card.classList.add('bg-surface-container');
+        btnElement.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btnElement.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        btnElement.innerHTML = '<span class="material-symbols-outlined text-[14px]">add</span><span>Add</span>';
+      } else {
+        selectedEquipment.set(id, { name, rate });
+        card.classList.remove('bg-surface-container');
+        card.classList.add('bg-primary-container/10');
+        btnElement.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        btnElement.classList.add('bg-primary-container', 'text-on-primary-container');
+        btnElement.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>Added</span>';
+      }
+      updateTray();
+    };
+
+    function updateTray() {
+      const totalCount = selectedEquipment.size;
+      if (totalCount === 0) {
+        tray.classList.add('opacity-0', 'pointer-events-none', 'translate-y-8');
+      } else {
+        tray.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-8');
+        let totalHourly = 0;
+        selectedEquipment.forEach(item => {
+          totalHourly += item.rate;
+        });
+
+        trayCountBadge.textContent = totalCount;
+        trayTitleText.textContent = totalCount === 1 
+          ? '1 Equipment selected' 
+          : `${totalCount} Machinery Units selected`;
+        trayRateText.textContent = `₹${totalHourly.toLocaleString('en-IN')}/hr`;
+      }
+    }
+
+    // Filter Chips logic
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('active', 'bg-primary-container', 'text-on-primary-container', 'shadow-xs');
+          c.classList.add('bg-surface-container', 'text-secondary');
+        });
+        chip.classList.add('active', 'bg-primary-container', 'text-on-primary-container', 'shadow-xs');
+        chip.classList.remove('bg-surface-container', 'text-secondary');
+
+        const filterValue = chip.getAttribute('data-filter');
+        applyFilters(filterValue, searchInput.value.trim().toLowerCase());
+      });
+    });
+
+    // Realtime Search filtering
+    searchInput.addEventListener('input', (e) => {
+      const activeChip = document.querySelector('.filter-chip.active');
+      const currentCategory = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+      applyFilters(currentCategory, e.target.value.trim().toLowerCase());
+    });
+
+    function applyFilters(category, query) {
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        const itemName = card.getAttribute('data-name').toLowerCase();
+        const matchesCategory = (category === 'all' || itemCat === category);
+        const matchesSearch = query === '' || itemName.includes(query);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    initDefaultSelection();
+  })();
+</script></main>
+<!-- Bottom Navigation Dock -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-t border-border-subtle max-w-md mx-auto">
+<div class="flex justify-around items-center h-14 px-4">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center min-w-[56px] text-text-secondary hover:text-text-primary transition-colors" href="#home">
+<span class="material-symbols-outlined filled text-[20px] text-secondary" data-icon="home">home</span>
+<span class="text-[10px] font-bold mt-0.5">Home</span>
+<span class="w-1 h-1 rounded-full bg-primary mt-0.5"></span>
+</a>
+<!-- Bookings -->
+<a class="flex flex-col items-center justify-center min-w-[56px] text-text-secondary hover:text-text-primary transition-colors" href="#bookings">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_month">calendar_month</span>
+<span class="text-[10px] font-medium mt-0.5">Bookings</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center min-w-[56px] text-text-secondary hover:text-text-primary transition-colors" href="#profile">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+<span class="text-[10px] font-medium mt-0.5">Profile</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+</a>
+</div>
+</nav>
+</div>
+
+
+</body></html>

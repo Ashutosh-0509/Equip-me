@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BMC Heavy Equipment - Contractor Profile</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts Noto Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#ffb400",
+            "surface-container-highest": "#e4e2e2",
+            "text-muted": "#6B6B6B",
+            "status-success": "#1E9E5A",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#454747",
+            "primary-fixed": "#ffdeac",
+            "on-secondary-fixed": "#1b1b1d",
+            "outline": "#847560",
+            "on-primary-fixed-variant": "#5f4100",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#e2e2e2",
+            "on-surface-variant": "#514532",
+            "inverse-on-surface": "#f2f0f0",
+            "surface-card": "#F5F5F5",
+            "status-info": "#2563EB",
+            "text-primary": "#1C1C1E",
+            "on-tertiary-container": "#4e5050",
+            "surface-bright": "#fbf9f8",
+            "inverse-primary": "#ffba35",
+            "secondary": "#5f5e60",
+            "on-primary-fixed": "#281900",
+            "surface-variant": "#e4e2e2",
+            "primary-fixed-dim": "#ffba35",
+            "primary": "#7e5700",
+            "surface-container": "#efeded",
+            "status-warning": "#E67E22",
+            "outline-variant": "#d6c4ac",
+            "tertiary": "#5d5f5f",
+            "on-background": "#1b1c1c",
+            "surface-container-low": "#f5f3f3",
+            "background": "#fbf9f8",
+            "on-secondary-fixed-variant": "#474649",
+            "surface-container-high": "#e9e8e7",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "secondary-fixed": "#e4e2e4",
+            "surface-tint": "#7e5700",
+            "on-surface": "#1b1c1c",
+            "inverse-surface": "#303031",
+            "secondary-fixed-dim": "#c8c6c8",
+            "tertiary-container": "#c1c2c2",
+            "on-secondary-container": "#636264",
+            "on-error": "#ffffff",
+            "secondary-container": "#e2dfe1",
+            "surface-dim": "#dbdad9",
+            "status-error": "#D93025",
+            "on-tertiary-fixed": "#1a1c1c",
+            "surface-base": "#FFFFFF",
+            "surface": "#fbf9f8",
+            "stroke-card": "#E5E5EA",
+            "on-primary-container": "#6b4900"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Noto Sans"],
+            "headline-lg": ["Noto Sans"],
+            "headline-md": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "label-sm": ["Noto Sans"],
+            "button-text": ["Noto Sans"],
+            "display-code": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "title-sm": ["Noto Sans"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.2px", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "button-text": ["18px", { "lineHeight": "24px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+            "display-code": ["36px", { "lineHeight": "44px", "letterSpacing": "4px", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-base text-text-primary antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-text-primary">
+<!-- Mobile Viewport Container (Target 360px - 414px) -->
+<div class="w-full max-w-md bg-surface-base flex flex-col min-h-screen relative shadow-sm pb-20"><header class="sticky top-0 z-40 bg-surface shadow-sm"><div class="flex justify-between items-center h-16 px-gutter w-full"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[28px]" data-icon="construction">construction</span><div><h1 class="text-headline-md font-headline-md text-on-surface tracking-tight leading-tight">Contractor Profile</h1></div></div></div></header><main class="flex-1 px-gutter py-space-md flex flex-col gap-4"><section class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-5 shadow-sm relative overflow-hidden"><div class="flex items-start justify-between gap-4"><div class="flex-1 min-w-0"><div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container text-[11px] font-semibold tracking-wide uppercase mb-2"><span class="material-symbols-outlined text-[14px]">verified</span><span>Verified Contractor</span></div><h2 class="text-[22px] font-bold text-on-surface tracking-tight leading-snug">Sharma Infra &amp; Co.</h2><div class="flex flex-wrap items-center gap-y-1 text-sm text-secondary mt-1.5 font-medium"><span class="text-on-surface-variant font-semibold">Rajesh Sharma</span><span class="mx-2 text-outline-variant">•</span><span>+91 98201 44552</span></div></div><div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined text-[26px]">corporate_fare</span></div></div></section><section class="grid grid-cols-2 gap-3"><div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-4 flex flex-col justify-between shadow-sm"><span class="text-[11px] font-bold tracking-wider text-secondary uppercase">Active Tasks</span><div class="flex items-baseline justify-between mt-2"><span class="text-[32px] font-bold text-primary leading-none tracking-tight">01</span><span class="material-symbols-outlined text-primary/60 text-[20px]">timelapse</span></div></div><div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-4 flex flex-col justify-between shadow-sm"><span class="text-[11px] font-bold tracking-wider text-secondary uppercase">Completed</span><div class="flex items-baseline justify-between mt-2"><span class="text-[32px] font-bold text-on-surface leading-none tracking-tight">48</span><span class="material-symbols-outlined text-secondary/60 text-[20px]">task_alt</span></div></div></section><button class="w-full h-13 py-3.5 rounded-xl border border-error/30 text-error font-semibold flex items-center justify-center gap-2.5 bg-surface-container-lowest hover:bg-error/5 active:scale-[0.98] transition-all shadow-sm mt-1" type="button"><span class="material-symbols-outlined text-[20px]">logout</span><span class="text-sm tracking-wide font-medium">Log Out from Device</span></button><footer class="text-center pt-8 pb-4"><div class="flex items-center justify-center gap-1.5 text-secondary/80"><span class="material-symbols-outlined text-[16px]">shield</span><span class="text-[11px] font-medium tracking-wide uppercase">Brihanmumbai Municipal Corporation</span></div></footer></main><nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-gutter bg-surface dark:bg-inverse-surface max-w-md mx-auto shadow-md dark:shadow-none"><a class="min-h-[56px] min-w-[56px] flex flex-col items-center justify-center text-text-primary hover:text-primary active:scale-95 transition-transform duration-150" href="#"><span class="material-symbols-outlined text-[24px]" data-icon="home">home</span><span class="text-label-sm font-label-sm font-bold text-text-primary">Home</span></a><a class="min-h-[56px] min-w-[56px] flex flex-col items-center justify-center text-text-primary hover:text-primary active:scale-95 transition-transform duration-150 relative" href="#"><span class="material-symbols-outlined text-[24px]" data-icon="calendar_month">calendar_month</span><span class="text-label-sm font-label-sm font-bold text-text-primary">Bookings</span></a><a class="min-h-[56px] min-w-[56px] flex flex-col items-center justify-center text-text-primary hover:text-primary active:scale-95 transition-transform duration-150 relative" href="#"><div class="relative flex flex-col items-center"><span class="material-symbols-outlined text-[24px] text-text-primary" data-icon="person" style="font-variation-settings: &quot;FILL&quot; 1;">person</span><span class="text-label-sm font-label-sm font-bold text-text-primary">Profile</span><span class="w-1.5 h-1.5 rounded-full bg-primary-container mt-0.5"></span></div></a></nav></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-container":"#4e5050","tertiary-fixed":"#e2e2e2","surface-variant":"#e4e2e2","secondary-fixed-dim":"#c8c6c8","surface-container-low":"#f5f3f3","inverse-on-surface":"#f2f0f0","background":"#fbf9f8","on-primary-fixed":"#281900","primary-fixed-dim":"#ffba35","on-secondary":"#ffffff","error-container":"#ffdad6","primary-fixed":"#ffdeac","secondary":"#5f5e60","surface-container-highest":"#e4e2e2","tertiary-container":"#c1c2c2","outline":"#847560","outline-variant":"#d6c4ac","on-tertiary-fixed":"#1a1c1c","secondary-fixed":"#e4e2e4","on-background":"#1b1c1c","surface-dim":"#dbdad9","on-secondary-fixed":"#1b1b1d","on-tertiary-fixed-variant":"#454747","primary-container":"#ffb400","inverse-surface":"#303031","surface-container":"#efeded","on-primary-container":"#6b4900","on-surface":"#1b1c1c","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-secondary-container":"#636264","surface-container-high":"#e9e8e7","on-tertiary":"#ffffff","on-surface-variant":"#514532","on-primary-fixed-variant":"#5f4100","on-error-container":"#93000a","tertiary-fixed-dim":"#c6c6c7","error":"#ba1a1a","tertiary":"#5d5f5f","on-error":"#ffffff","inverse-primary":"#ffba35","surface-bright":"#fbf9f8","surface-tint":"#7e5700","on-secondary-fixed-variant":"#474649","secondary-container":"#e2dfe1","surface":"#fbf9f8","primary":"#7e5700"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{},"fontFamily":{"headline":["Noto Sans"],"display":["Noto Sans"],"body":["Noto Sans"],"label":["Noto Sans"]},"fontSize":{}}}}</script></head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-4 flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface rounded-xl hover:bg-surface-container active:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-2xl">arrow_back</span></button><h1 class="text-lg font-headline font-bold text-on-surface tracking-tight leading-tight truncate">Edit Equipment</h1></div><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface flex-1"><div class="flex flex-col w-full pb-32">
+<!-- Mode Switcher Segment Control -->
+<div class="px-4 py-3 bg-surface-container-low">
+<div class="flex items-center justify-between p-1 bg-surface-container-highest rounded-xl">
+<button class="flex-1 py-2.5 text-center text-sm font-headline font-semibold text-secondary rounded-lg transition-all duration-200 flex items-center justify-center gap-1.5" id="tab-add" onclick="setMode('add')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Add New Machine
+      </button>
+<button class="flex-1 py-2.5 text-center text-sm font-headline font-semibold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm transition-all duration-200 flex items-center justify-center gap-1.5" id="tab-edit" onclick="setMode('edit')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">edit</span>
+        Edit Existing
+      </button>
+</div>
+</div>
+<!-- Active Edit Notice Banner -->
+<div class="mx-4 mt-3 px-3 py-2 bg-primary-fixed rounded-xl flex items-center justify-between" id="editing-indicator">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-primary-fixed text-lg">precision_manufacturing</span>
+<span class="text-xs font-headline font-bold text-on-primary-fixed tracking-wide">EDITING ASSET:</span>
+<span class="text-xs font-mono font-bold bg-primary-container text-on-primary-container px-2 py-0.5 rounded">MH-02-EQ-4491</span>
+</div>
+
+</div>
+<!-- Equipment Category Selection -->
+<div class="mt-4 px-4">
+<div class="flex items-baseline justify-between mb-2">
+<label class="text-xs font-headline font-bold uppercase tracking-wider text-secondary">1. Category Selection</label>
+
+</div>
+<div class="flex gap-2.5 overflow-x-auto pb-2 scrollbar-none">
+<!-- Item: JCB (Selected) -->
+<button class="flex-shrink-0 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-primary-container text-on-surface font-headline font-bold text-xs shadow-sm shadow-primary/20" type="button">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: &quot;FILL&quot; 1;">front_loader</span>
+<span>JCB 3DX Backhoe</span>
+</button>
+<!-- Item: Excavator -->
+<button class="flex-shrink-0 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-surface-container-highest text-secondary font-headline font-semibold text-xs active:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-lg">construction</span>
+<span>Hydraulic Excavator</span>
+</button>
+<!-- Item: Tipper / Dumper -->
+<button class="flex-shrink-0 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-surface-container-highest text-secondary font-headline font-semibold text-xs active:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+<span>Tipper / Dumper</span>
+</button>
+<!-- Item: Compactor / Roller -->
+<button class="flex-shrink-0 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-surface-container-highest text-secondary font-headline font-semibold text-xs active:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-lg">engineering</span>
+<span>Compactor / Roller</span>
+</button>
+<!-- Item: Crane -->
+<button class="flex-shrink-0 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-surface-container-highest text-secondary font-headline font-semibold text-xs active:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-lg">precision_manufacturing</span>
+<span>Mobile Crane</span>
+</button>
+</div>
+</div>
+<!-- Main Specifications Form Container -->
+<div class="px-4 mt-3 space-y-4">
+<!-- Card 1: Machine & Model Specs -->
+<div class="bg-surface-container-low rounded-2xl p-4 shadow-sm">
+
+<div class="space-y-3">
+<!-- Make and Model -->
+<div>
+<label class="block text-xs font-semibold text-secondary mb-1">Make &amp; Full Model Name</label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 bg-surface-container-lowest text-on-surface text-sm font-medium rounded-xl outline-none focus:bg-white transition-colors" type="text" value="JCB 3DX EcoXpert 4WD">
+
+</div>
+</div>
+<!-- Registration & Year Grid -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-semibold text-secondary mb-1">Vehicle Reg No.</label>
+<input class="w-full h-12 px-3.5 bg-surface-container-lowest text-on-surface font-mono font-bold text-sm tracking-wider uppercase rounded-xl outline-none" type="text" value="MH-02-EQ-4491">
+</div>
+<div>
+
+
+</div>
+</div>
+<!-- Capacity / Tonnage Input -->
+<div>
+
+<div class="relative">
+
+
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Commercial Rates & Billing -->
+<div class="bg-surface-container-low rounded-2xl p-4 shadow-sm">
+<div class="flex items-center gap-2 mb-3.5">
+<span class="w-2 h-4 bg-primary-container rounded-full"></span>
+<h2 class="text-sm font-headline font-bold text-on-surface uppercase tracking-wide">Commercial Rates &amp; Shift Billing</h2>
+</div>
+<div class="space-y-3.5">
+<!-- Base Hourly Rate -->
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<label class="text-xs font-semibold text-secondary">Base Hourly Rate (INR)</label>
+
+</div>
+<div class="flex items-center bg-surface-container-lowest rounded-xl h-12 px-3.5">
+<span class="text-base font-bold text-secondary mr-2">₹</span>
+<input class="w-full text-base font-headline font-bold text-on-surface bg-transparent outline-none" type="number" value="1450">
+<span class="text-xs font-medium text-secondary">/ hour</span>
+</div>
+
+</div>
+<!-- Minimum Billing Commitment -->
+
+<!-- Overtime Hourly Rate -->
+<div>
+<label class="block text-xs font-semibold text-secondary mb-1">Overtime Billing Rate</label>
+<div class="flex items-center bg-surface-container-lowest rounded-xl h-12 px-3.5">
+<span class="text-base font-bold text-secondary mr-2">₹</span>
+<input class="w-full text-sm font-headline font-bold text-on-surface bg-transparent outline-none" type="number" value="220">
+<span class="text-xs font-medium text-secondary">/ extra hour</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Base Depot & Ward Coverage -->
+<div class="bg-surface-container-low rounded-2xl p-4 shadow-sm">
+<div class="flex items-center justify-between mb-3.5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-4 bg-primary-container rounded-full"></span>
+<h2 class="text-sm font-headline font-bold text-on-surface uppercase tracking-wide">Base Depot &amp; Coverage</h2>
+</div>
+
+</div>
+<div class="space-y-3">
+<!-- Depot Location -->
+<div>
+<label class="block text-xs font-semibold text-secondary mb-1">Base Depot Address</label>
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full h-12 pl-9 pr-3 bg-surface-container-lowest text-on-surface text-sm font-medium rounded-xl outline-none truncate" type="text" value="Depot Bandra West, S.V. Road">
+<span class="absolute left-3 top-3.5 material-symbols-outlined text-primary text-lg">location_on</span>
+</div>
+<button class="h-12 px-3 bg-surface-container-highest active:bg-surface-container text-on-surface text-xs font-headline font-bold rounded-xl flex items-center gap-1 flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+<span>Map Pin</span>
+</button>
+</div>
+</div>
+<!-- Static Map Visual Preview -->
+<div class="w-full h-24 rounded-xl bg-cover bg-center overflow-hidden relative shadow-inner" data-location="Bandra West S.V. Road Mumbai" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBVJ_OJZ5LUfDCoZTQoEDShSu4Av7yFrlgcZI0rqv9C5qVXIN1Muit-e57DNvl6-5zWtFRDNyPQsTPFc8Wl6oRrkLazTpw8VLVxi9Ohm5ULtC_6zOLMHBUhpGyq6M6l8WR0S6npSg9iw-qZJ1eX_QRIG0Js1A4SFjpiBmhw66Y_RlPPHF5NxARwxiHw0l2gXzHWdkx1RF7VLhzsOmDsCfmMHMgGk066QPJrNsvYlQ&quot;);">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2.5">
+<span class="text-[11px] text-white font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">near_me</span>
+              Dispatched from Bandra Municipal Yards
+            </span>
+</div>
+</div>
+<!-- Operational Ward Coverage -->
+<div>
+
+
+
+</div>
+</div>
+</div>
+<!-- Card 4: BMC Document Compliance (Read-only System Verification) -->
+
+<!-- Card 5: Assigned Default Operator -->
+
+<!-- Quick Machine Status Checklist -->
+
+</div>
+<!-- Persistent Sticky Bottom Action Toolbar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-md px-4 py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+<div class="max-w-md mx-auto space-y-2">
+<!-- Primary Save / Submit Button (56px Height strictly styled) -->
+<button class="w-full h-14 bg-primary-container hover:bg-primary-fixed-dim active:scale-[0.99] text-on-surface font-headline font-bold text-base rounded-xl shadow-md flex items-center justify-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-xl">save</span>
+<span>Save Equipment Changes</span>
+</button>
+<!-- Danger/Deactivation Secondary Option -->
+
+</div>
+</div>
+</div>
+<script>
+  function setMode(mode) {
+    const tabAdd = document.getElementById('tab-add');
+    const tabEdit = document.getElementById('tab-edit');
+    const indicator = document.getElementById('editing-indicator');
+
+    if (mode === 'add') {
+      tabAdd.className = 'flex-1 py-2.5 text-center text-sm font-headline font-semibold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm transition-all duration-200 flex items-center justify-center gap-1.5';
+      tabEdit.className = 'flex-1 py-2.5 text-center text-sm font-headline font-semibold text-secondary rounded-lg transition-all duration-200 flex items-center justify-center gap-1.5';
+      if (indicator) {
+        indicator.classList.add('hidden');
+      }
+    } else {
+      tabEdit.className = 'flex-1 py-2.5 text-center text-sm font-headline font-semibold bg-surface-container-lowest text-on-surface rounded-lg shadow-sm transition-all duration-200 flex items-center justify-center gap-1.5';
+      tabAdd.className = 'flex-1 py-2.5 text-center text-sm font-headline font-semibold text-secondary rounded-lg transition-all duration-200 flex items-center justify-center gap-1.5';
+      if (indicator) {
+        indicator.classList.remove('hidden');
+      }
+    }
+  }
+</script></main>
+
+</body></html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BMC Heavy Equipment - Review &amp; Confirm</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Noto Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#f2f0f0",
+            "primary-fixed": "#ffdeac",
+            "surface": "#fbf9f8",
+            "on-secondary-fixed-variant": "#474649",
+            "surface-tint": "#7e5700",
+            "on-primary-container": "#6b4900",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#e4e2e2",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#c8c6c8",
+            "inverse-primary": "#ffba35",
+            "stroke-card": "#E5E5EA",
+            "status-success": "#1E9E5A",
+            "surface-container": "#efeded",
+            "background": "#fbf9f8",
+            "on-secondary-container": "#636264",
+            "outline": "#847560",
+            "on-secondary-fixed": "#1b1b1d",
+            "on-surface-variant": "#514532",
+            "status-warning": "#E67E22",
+            "on-error": "#ffffff",
+            "tertiary-container": "#c1c2c2",
+            "on-primary-fixed": "#281900",
+            "on-error-container": "#93000a",
+            "tertiary": "#5d5f5f",
+            "tertiary-fixed": "#e2e2e2",
+            "status-error": "#D93025",
+            "text-primary": "#1C1C1E",
+            "surface-card": "#F5F5F5",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-primary-fixed-variant": "#5f4100",
+            "secondary-container": "#e2dfe1",
+            "outline-variant": "#d6c4ac",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#e4e2e2",
+            "primary-fixed-dim": "#ffba35",
+            "surface-dim": "#dbdad9",
+            "surface-base": "#FFFFFF",
+            "secondary": "#5f5e60",
+            "on-background": "#1b1c1c",
+            "on-tertiary-fixed": "#1a1c1c",
+            "text-muted": "#6B6B6B",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#e9e8e7",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3f3",
+            "status-info": "#2563EB",
+            "primary-container": "#ffb400",
+            "on-tertiary": "#ffffff",
+            "primary": "#7e5700",
+            "on-tertiary-container": "#4e5050",
+            "surface-bright": "#fbf9f8",
+            "on-tertiary-fixed-variant": "#454747",
+            "inverse-surface": "#303031",
+            "secondary-fixed": "#e4e2e4",
+            "on-surface": "#1b1c1c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "button-text": ["Noto Sans"],
+            "headline-md": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "display-code": ["Noto Sans"],
+            "label-sm": ["Noto Sans"],
+            "headline-lg": ["Noto Sans"],
+            "title-sm": ["Noto Sans"]
+          },
+          "fontSize": {
+            "button-text": ["18px", {"lineHeight": "24px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+            "label-md": ["14px", {"lineHeight": "18px", "fontWeight": "500"}],
+            "display-code": ["36px", {"lineHeight": "44px", "letterSpacing": "4px", "fontWeight": "700"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.2px", "fontWeight": "700"}],
+            "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Ambient custom shadows per design guidelines */
+    .shadow-ambient-card {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .shadow-bottom-bar {
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-surface-base text-text-primary antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-text-primary">
+<!-- Mobile Viewport Wrapper (360px - 390px target) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface-base flex flex-col relative pb-36">
+<!-- 1. Top Bar (Task-focused subpage header with navigation suppression mandate applied) -->
+<header class="sticky top-0 z-30 bg-surface-base px-gutter h-16 flex items-center justify-between border-b border-stroke-card"><div class="flex items-center gap-3"><button aria-label="Go back to step 2" class="w-10 h-10 -ml-1 rounded-full flex items-center justify-center text-text-primary active:scale-95 transition-transform hover:bg-surface-card" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-[20px] font-bold text-text-primary tracking-tight">Review Booking</h1></div></header>
+<!-- Main Content Container -->
+<main class="flex-1 px-gutter pt-4 space-y-4"><section aria-label="Booking Progress" class="space-y-2"><div class="flex justify-between items-center"><span class="text-[14px] font-semibold text-text-primary">Step 3 of 3: Review &amp; Confirm</span><span class="text-[13px] font-medium text-text-muted">3 of 3</span></div><div class="grid grid-cols-3 gap-1.5 h-1.5 w-full"><div class="bg-primary-container rounded-full h-full"></div><div class="bg-primary-container rounded-full h-full"></div><div class="bg-primary-container rounded-full h-full"></div></div></section><section class="bg-surface-base rounded-xl border border-stroke-card p-4 shadow-sm space-y-3.5"><div class="flex items-center justify-between pb-2.5 border-b border-stroke-card"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-text-primary text-[20px]">inventory_2</span><h2 class="text-[16px] font-bold text-text-primary">Order Summary</h2></div><button aria-label="Edit Order Summary" class="flex items-center gap-1 text-[13px] font-semibold text-text-muted hover:text-text-primary transition-colors" type="button"><span>Edit</span><span class="material-symbols-outlined text-[16px]">edit</span></button></div><div class="flex items-start gap-3"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2"><h3 class="text-[15px] font-bold text-text-primary leading-snug">JCB 3DX Heavy Loader</h3><span class="text-[14px] font-bold text-text-primary flex-shrink-0">₹1,450<span class="text-[12px] font-normal text-text-muted">/hr</span></span></div><p class="text-[13px] text-text-muted mt-0.5">2 Units • Loader + Backhoe</p></div></div><div class="h-px bg-stroke-card w-full"></div><div class="space-y-3 text-[13px]"><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-[18px] text-text-muted mt-0.5 flex-shrink-0">calendar_today</span><div class="flex-1"><p class="text-text-muted font-medium text-[12px]">Date &amp; Shift</p><p class="text-text-primary font-semibold mt-0.5">Wed, 24 Oct • 8:00 AM – 4:00 PM <span class="font-normal text-text-muted">(1 Shift / 8h)</span></p></div></div><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-[18px] text-text-muted mt-0.5 flex-shrink-0">location_on</span><div class="flex-1"><p class="text-text-muted font-medium text-[12px]">Deployment Site</p><p class="text-text-primary font-semibold mt-0.5">Plot 42-B, SV Road Ext, Santacruz (W), Ward H/West</p></div></div><div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-[18px] text-text-muted mt-0.5 flex-shrink-0">description</span><div class="flex-1"><p class="text-text-muted font-medium text-[12px]">BMC Project Clearance</p><p class="text-text-primary font-semibold mt-0.5">WO-2024-8842 • Storm Water Drain Widening</p></div></div></div></section><section class="bg-surface-base rounded-xl border border-stroke-card p-4 shadow-sm space-y-3"><div class="flex flex-col gap-0.5"><span class="text-[11px] font-bold uppercase tracking-wider text-text-muted">Estimated Total Cost</span><div class="flex items-baseline gap-2 mt-0.5"><span class="text-[28px] font-bold text-text-primary tracking-tight leading-none">₹ 13,688</span></div><p class="text-[12px] text-text-muted mt-1">Final charge calculated on verified telematics &amp; actual site hours</p></div></section><section class="pt-1"><label class="flex items-start gap-3 bg-surface-base p-3.5 rounded-xl border border-stroke-card cursor-pointer select-none shadow-sm hover:bg-surface-card transition-colors"><input checked="" class="w-5 h-5 mt-0.5 rounded text-primary-container focus:ring-primary-container focus:ring-offset-0 border-stroke-card accent-[#FFB400] cursor-pointer flex-shrink-0" type="checkbox"><span class="text-[12px] text-text-primary font-medium leading-relaxed">I confirm that machinery deployment adheres to BMC Tender WO-2024-8842 work scope and site safety protocols.</span></label></section></main>
+<!-- 7. Bottom Fixed Action Area (56px CTA + High Contrast Yellow #FFB400) -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-base px-gutter py-3 border-t border-stroke-card shadow-bottom-bar flex justify-center"><div class="w-full max-w-[390px] flex flex-col items-center"><button class="w-full h-14 bg-primary-container hover:bg-[#e5a200] active:scale-[0.98] transition-all duration-150 rounded-xl flex items-center justify-center gap-2 text-text-primary font-bold text-[16px] shadow-sm" type="button"><span>Book Now • Pay After Work</span><span class="material-symbols-outlined text-[20px] font-bold">bolt</span></button><p class="text-[12px] text-text-muted font-medium mt-2 text-center flex items-center justify-center gap-1.5"></p></div></div>
+</div>
+
+
+</body></html>

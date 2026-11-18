@@ -1,0 +1,1421 @@
+{
+  "version": 4,
+  "app_title": "BMC Heavy Logix Plan",
+  "nav": {
+    "placement": "none",
+    "items": []
+  },
+  "pages": [
+    {
+      "id": "page-271fd833",
+      "name": "Unified Demo Login",
+      "route": "/login",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "login-header",
+          "type": "header",
+          "label": "BMC Heavy Logix",
+          "hint": "Minimal Site Yellow branding and clearly labeled demo access",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "login-form",
+          "type": "form",
+          "label": "Choose demo domain and enter",
+          "hint": "Contractor, Provider, Operator, Officer; role redirects to matching dashboard",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 5,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-4326fe12",
+      "name": "Contractor Home",
+      "route": "/contractor",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "contractor-header",
+          "type": "header",
+          "label": "BMC Heavy Logix · Contractor",
+          "hint": "Company identity from the reference",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "contractor-recent",
+          "type": "list",
+          "label": "Recent Bookings",
+          "hint": "Booking summaries and order equipment action",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "contractor-nav-home",
+          "type": "nav",
+          "label": "Home · Equipment · Bookings · Profile",
+          "hint": "Reference bottom navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-de38e34f",
+      "name": "Equipment Catalogue",
+      "route": "/contractor/equipment",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "catalogue-filter",
+          "type": "form",
+          "label": "Search and category filters",
+          "hint": "All, earthmoving, haulage, compaction, cranes",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "catalogue-grid",
+          "type": "text",
+          "label": "Equipment selection",
+          "hint": "Six equipment types, prices, add/selected states",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "catalogue-nav",
+          "type": "nav",
+          "label": "Home · Bookings · Profile",
+          "hint": "Selected-equipment booking action above bottom navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-a827e040",
+      "name": "Booking Equipment & Schedule",
+      "route": "/contractor/booking/equipment",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "booking-one-head",
+          "type": "header",
+          "label": "New Booking · Step 1 of 3",
+          "hint": "Back navigation and step progress",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "booking-one-form",
+          "type": "form",
+          "label": "Equipment quantities, date and shift",
+          "hint": "Steppers, unit rates, computed subtotal, choose site action",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 8,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-21d64038",
+      "name": "Booking Site Location",
+      "route": "/contractor/booking/site",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "booking-two-head",
+          "type": "header",
+          "label": "New Booking · Step 2 of 3",
+          "hint": "Back navigation and progress",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "booking-two-map",
+          "type": "map",
+          "label": "Site location preview",
+          "hint": "Reference location view with editable coordinates; no claimed live map integration",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 4,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "booking-two-form",
+          "type": "form",
+          "label": "Site address and work order",
+          "hint": "Editable deployment address, project clearance, review action",
+          "x": 0,
+          "y": 6,
+          "w": 12,
+          "h": 4,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-96ab7eca",
+      "name": "Review & Confirm",
+      "route": "/contractor/booking/review",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "booking-three-head",
+          "type": "header",
+          "label": "Review Booking · Step 3 of 3",
+          "hint": "Back navigation",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "booking-three-summary",
+          "type": "list",
+          "label": "Order, schedule, site and cost",
+          "hint": "Editable summaries and consistent calculated totals",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 6,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "booking-three-confirm",
+          "type": "form",
+          "label": "Safety confirmation and Book Now",
+          "hint": "Create a shared demo booking for officer/provider workflows",
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-1efdf96f",
+      "name": "Live Booking",
+      "route": "/contractor/bookings/[booking_id]",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "live-booking-head",
+          "type": "header",
+          "label": "Order ID and booking actions",
+          "hint": "Report problem and cancel where permitted",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "live-booking-status",
+          "type": "text",
+          "label": "Booking status and verification code",
+          "hint": "Arrival PIN, assignment, start/end handoff and live progress",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "live-booking-nav",
+          "type": "nav",
+          "label": "Home · Bookings · Profile",
+          "hint": "Contractor bottom navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-af6d8420",
+      "name": "Contractor Bookings",
+      "route": "/contractor/bookings",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "bookings-head",
+          "type": "header",
+          "label": "Bookings",
+          "hint": "Status filters",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "bookings-list",
+          "type": "list",
+          "label": "Shared booking records",
+          "hint": "Open each booking and follow its lifecycle",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "bookings-nav",
+          "type": "nav",
+          "label": "Home · Bookings · Profile",
+          "hint": "Contractor navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-3aed9505",
+      "name": "Contractor Profile",
+      "route": "/contractor/profile",
+      "item_ref": {
+        "index": 0,
+        "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+      },
+      "blocks": [
+        {
+          "id": "contractor-profile-head",
+          "type": "header",
+          "label": "Contractor Profile",
+          "hint": "Verified contractor identity from reference sample",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "contractor-profile-body",
+          "type": "text",
+          "label": "Company, tasks and demo logout",
+          "hint": "Active/completed records derived from demo bookings",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "contractor-profile-nav",
+          "type": "nav",
+          "label": "Home · Bookings · Profile",
+          "hint": "Contractor navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 0,
+            "text": "Build a unified demo login with four domain-specific entry experiences and automatic demo-role routing, plus the complete Contractor journey: home, equipment catalogue, three-step booking, live booking, bookings, and profile. Follow the ZIP’s Site Yellow design: Noto Sans, white/light-gray surfaces, charcoal text, amber #FFB400 actions, mobile-first layouts and bottom navigation. Use connected sample data that resets on reload; demo access is not production authentication."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-39606a60",
+      "name": "Provider Requests",
+      "route": "/provider/requests",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+      },
+      "blocks": [
+        {
+          "id": "provider-head",
+          "type": "header",
+          "label": "BMC Fleet Ops",
+          "hint": "Accepting jobs and request totals",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "provider-requests",
+          "type": "list",
+          "label": "Incoming requests",
+          "hint": "Accept, reject, accept fewer units and proceed to assignment",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "provider-request-nav",
+          "type": "nav",
+          "label": "Requests · Schedule · Fleet · Profile",
+          "hint": "Provider bottom navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-3c4c06c7",
+      "name": "Assign Vehicle & Operator",
+      "route": "/provider/assign/[booking_id]",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+      },
+      "blocks": [
+        {
+          "id": "assign-head",
+          "type": "header",
+          "label": "Booking deployment summary",
+          "hint": "Equipment, rate, ward, time and address",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 3,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "assign-form",
+          "type": "form",
+          "label": "Required allocations",
+          "hint": "Vehicle and operator selections for each unit; confirm assignment",
+          "x": 0,
+          "y": 3,
+          "w": 12,
+          "h": 6,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "assign-nav",
+          "type": "nav",
+          "label": "Requests · Schedule · Fleet · Profile",
+          "hint": "Provider navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-efdb133b",
+      "name": "Provider Schedule",
+      "route": "/provider/schedule",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+      },
+      "blocks": [
+        {
+          "id": "schedule-head",
+          "type": "header",
+          "label": "Fleet Schedule",
+          "hint": "Date selection and filters",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "schedule-list",
+          "type": "list",
+          "label": "Daily deployments",
+          "hint": "Time, vehicle registration, site and assigned operator",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "schedule-nav",
+          "type": "nav",
+          "label": "Requests · Schedule · Fleet · Profile",
+          "hint": "Provider navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-cb9bf069",
+      "name": "Fleet & Operators",
+      "route": "/provider/fleet",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+      },
+      "blocks": [
+        {
+          "id": "fleet-filter",
+          "type": "form",
+          "label": "Vehicles / Operators, search and filters",
+          "hint": "Availability counts and add machine action",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 3,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "fleet-list",
+          "type": "list",
+          "label": "Fleet and operator records",
+          "hint": "Availability, registrations, rates, edit actions and operator management",
+          "x": 0,
+          "y": 3,
+          "w": 12,
+          "h": 6,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "fleet-nav",
+          "type": "nav",
+          "label": "Requests · Schedule · Fleet · Profile",
+          "hint": "Provider navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-4ed2714d",
+      "name": "Add / Edit Equipment",
+      "route": "/provider/equipment/edit",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+      },
+      "blocks": [
+        {
+          "id": "asset-head",
+          "type": "header",
+          "label": "Add New / Edit Existing Equipment",
+          "hint": "Back navigation and selected asset",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "asset-form",
+          "type": "form",
+          "label": "Category, model, registration, rates and depot",
+          "hint": "Validated equipment form and Save Changes action",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 8,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-1a803d9c",
+      "name": "Provider Profile & Earnings",
+      "route": "/provider/profile",
+      "item_ref": {
+        "index": 1,
+        "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+      },
+      "blocks": [
+        {
+          "id": "provider-profile-head",
+          "type": "header",
+          "label": "Provider Profile",
+          "hint": "Company and contact information",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "provider-profile-body",
+          "type": "text",
+          "label": "Earnings, settlement and compliance",
+          "hint": "Demo earnings details, bank/compliance/support dialogs and logout",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "provider-profile-nav",
+          "type": "nav",
+          "label": "Requests · Schedule · Fleet · Profile",
+          "hint": "Provider navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 1,
+            "text": "Build the complete Provider workflow: incoming requests, partial acceptance/rejection, vehicle/operator assignment, daily schedule, fleet/operator management, add/edit equipment, and profile/earnings, connected to Contractor bookings."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-5dfcf06a",
+      "name": "Operator Today",
+      "route": "/operator/today",
+      "item_ref": {
+        "index": 2,
+        "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+      },
+      "blocks": [
+        {
+          "id": "operator-head",
+          "type": "header",
+          "label": "BMC Operator",
+          "hint": "Operator identity and duty status",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-today",
+          "type": "text",
+          "label": "Today’s shift and next roster",
+          "hint": "Assignment, site supervisor, transit and arrival actions",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-today-nav",
+          "type": "nav",
+          "label": "Today · History · Profile",
+          "hint": "Operator bottom navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-6176186f",
+      "name": "Arrived / Enter Start Code",
+      "route": "/operator/start",
+      "item_ref": {
+        "index": 2,
+        "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+      },
+      "blocks": [
+        {
+          "id": "operator-start-head",
+          "type": "header",
+          "label": "Arrived at Site",
+          "hint": "Back navigation and arrival state",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-start-form",
+          "type": "form",
+          "label": "Start-code keypad and verification",
+          "hint": "Four-digit code, clear/backspace, supervisor contact, start action",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 8,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-dd66a6ad",
+      "name": "Operator Live Shift",
+      "route": "/operator/shift",
+      "item_ref": {
+        "index": 2,
+        "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+      },
+      "blocks": [
+        {
+          "id": "operator-shift-head",
+          "type": "header",
+          "label": "Work in Progress",
+          "hint": "Booking identity and machine operational status",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-shift-body",
+          "type": "text",
+          "label": "Elapsed shift, equipment, site and supervisor",
+          "hint": "Timer and end-code handoff connected to contractor booking",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-shift-nav",
+          "type": "nav",
+          "label": "Today · History · Profile",
+          "hint": "Operator navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-28271bc7",
+      "name": "Operator History",
+      "route": "/operator/history",
+      "item_ref": {
+        "index": 2,
+        "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+      },
+      "blocks": [
+        {
+          "id": "operator-history-head",
+          "type": "header",
+          "label": "Shift History",
+          "hint": "Date/status filters",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-history-list",
+          "type": "list",
+          "label": "Completed and previous assignments",
+          "hint": "Derived demo work logs and detail views",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-history-nav",
+          "type": "nav",
+          "label": "Today · History · Profile",
+          "hint": "Operator navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-b6a0b3ad",
+      "name": "Operator Profile",
+      "route": "/operator/profile",
+      "item_ref": {
+        "index": 2,
+        "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+      },
+      "blocks": [
+        {
+          "id": "operator-profile-head",
+          "type": "header",
+          "label": "Operator Profile",
+          "hint": "Assigned operator identity",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-profile-body",
+          "type": "text",
+          "label": "Duty, contact, credentials and logout",
+          "hint": "Working demo profile actions",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "operator-profile-nav",
+          "type": "nav",
+          "label": "Today · History · Profile",
+          "hint": "Operator navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 2,
+            "text": "Build the complete Operator workflow: today’s assignment, transit and arrival, start-code verification, live shift, end-code handoff, history, and profile, with status changes reflected across the other domains."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-b8ecf7b2",
+      "name": "Officer Control Room",
+      "route": "/officer/dashboard",
+      "item_ref": {
+        "index": 3,
+        "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+      },
+      "blocks": [
+        {
+          "id": "officer-head",
+          "type": "header",
+          "label": "Ward G/N Control Room",
+          "hint": "Officer identity and intervention summary",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-pulse",
+          "type": "text",
+          "label": "Operational Pulse",
+          "hint": "Approval, unmatched, active and problem counts",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 3,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-urgent",
+          "type": "list",
+          "label": "Needs You Now",
+          "hint": "Urgent bookings with review and approval actions",
+          "x": 0,
+          "y": 5,
+          "w": 12,
+          "h": 4,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-dashboard-nav",
+          "type": "nav",
+          "label": "Dashboard · Requests · Providers · More",
+          "hint": "Officer bottom navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-a9fe2850",
+      "name": "Officer Requests",
+      "route": "/officer/requests",
+      "item_ref": {
+        "index": 3,
+        "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+      },
+      "blocks": [
+        {
+          "id": "officer-request-filter",
+          "type": "form",
+          "label": "All Ward Bookings",
+          "hint": "Search and approval/unmatched/active/dispute filters",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-request-list",
+          "type": "list",
+          "label": "Booking triage",
+          "hint": "Review, working-shift detail and breakdown reassignment",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 7,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-request-nav",
+          "type": "nav",
+          "label": "Dashboard · Requests · Providers · More",
+          "hint": "Officer navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-c85ea24e",
+      "name": "Officer Booking Verification",
+      "route": "/officer/bookings/[booking_id]",
+      "item_ref": {
+        "index": 3,
+        "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+      },
+      "blocks": [
+        {
+          "id": "officer-detail-head",
+          "type": "header",
+          "label": "Booking ID and ward verification",
+          "hint": "Print summary, ward reassignment and audit actions",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-detail-summary",
+          "type": "calendar",
+          "label": "Verification and financial summary",
+          "hint": "Contractor, provider, equipment, site, schedule and locked rates",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 5,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-detail-actions",
+          "type": "form",
+          "label": "Approve, ask for information or reject",
+          "hint": "Validated remarks and shared booking state updates",
+          "x": 0,
+          "y": 7,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-detail-nav",
+          "type": "nav",
+          "label": "Dashboard · Requests · Providers · More",
+          "hint": "Officer navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-45790c2c",
+      "name": "Municipal Directory",
+      "route": "/officer/providers",
+      "item_ref": {
+        "index": 3,
+        "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+      },
+      "blocks": [
+        {
+          "id": "directory-filter",
+          "type": "form",
+          "label": "Providers / Contractors directory",
+          "hint": "Counts, search and compliance filters",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 3,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "directory-list",
+          "type": "list",
+          "label": "Registered organizations",
+          "hint": "Inspect fleet, contact and register vendor actions",
+          "x": 0,
+          "y": 3,
+          "w": 12,
+          "h": 6,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "directory-nav",
+          "type": "nav",
+          "label": "Dashboard · Requests · Providers · More",
+          "hint": "Officer navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    },
+    {
+      "id": "page-0d87eb13",
+      "name": "Officer Reports & Disputes",
+      "route": "/officer/more",
+      "item_ref": {
+        "index": 3,
+        "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+      },
+      "blocks": [
+        {
+          "id": "officer-more-head",
+          "type": "header",
+          "label": "Officer identity and Control Room",
+          "hint": "Ward and role information",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-more-list",
+          "type": "list",
+          "label": "Problems, disputes and reports",
+          "hint": "Case detail, resolution, work-log audit and support inquiries; all sample evidence labeled",
+          "x": 0,
+          "y": 2,
+          "w": 12,
+          "h": 6,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-more-logout",
+          "type": "form",
+          "label": "Demo logout",
+          "hint": "Return to unified login",
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        },
+        {
+          "id": "officer-more-nav",
+          "type": "nav",
+          "label": "Dashboard · Requests · Providers · More",
+          "hint": "Officer navigation",
+          "x": 0,
+          "y": 9,
+          "w": 12,
+          "h": 1,
+          "item_ref": {
+            "index": 3,
+            "text": "Build the complete Officer workflow: control-room dashboard, booking triage and verification/approval, provider/contractor directory, reports and disputes, with working review, rejection, reassignment, resolution and audit actions; validate all domain navigation and responsive screens."
+          },
+          "type_source": "palette"
+        }
+      ],
+      "deleted_ids": []
+    }
+  ],
+  "attached_to_plan": false
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html><html class="h-full bg-surface" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Officer Requests — Ward G/N Control Room</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Noto Sans Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#e2e2e2",
+            "surface-dim": "#dbdad9",
+            "surface-tint": "#7e5700",
+            "surface-container": "#efeded",
+            "surface-variant": "#e4e2e2",
+            "surface-bright": "#fbf9f8",
+            "inverse-primary": "#ffba35",
+            "inverse-surface": "#303031",
+            "on-tertiary-fixed": "#1a1c1c",
+            "tertiary-container": "#c1c2c2",
+            "primary-container": "#ffb400",
+            "surface-container-low": "#f5f3f3",
+            "on-tertiary-container": "#4e5050",
+            "secondary": "#5f5e60",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fbf9f8",
+            "on-tertiary-fixed-variant": "#454747",
+            "on-surface-variant": "#514532",
+            "inverse-on-surface": "#f2f0f0",
+            "on-secondary-fixed-variant": "#474649",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "outline-variant": "#d6c4ac",
+            "on-background": "#1b1c1c",
+            "surface-container-high": "#e9e8e7",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#c8c6c8",
+            "on-primary-container": "#6b4900",
+            "on-secondary": "#ffffff",
+            "tertiary": "#5d5f5f",
+            "surface": "#fbf9f8",
+            "outline": "#847560",
+            "primary-fixed-dim": "#ffba35",
+            "secondary-fixed": "#e4e2e4",
+            "primary-fixed": "#ffdeac",
+            "on-secondary-container": "#636264",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#1b1c1c",
+            "secondary-container": "#e2dfe1",
+            "on-primary-fixed": "#281900",
+            "surface-container-highest": "#e4e2e2",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#5f4100",
+            "on-secondary-fixed": "#1b1b1d",
+            "primary": "#7e5700",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {},
+          "fontFamily": {
+            "headline": ["Noto Sans", "sans-serif"],
+            "display": ["Noto Sans", "sans-serif"],
+            "body": ["Noto Sans", "sans-serif"],
+            "label": ["Noto Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 16px);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-full bg-surface text-on-surface antialiased flex flex-col justify-between selection:bg-primary-container selection:text-on-surface">
+<!-- Mobile Container Constraint: 390px / 360px viewport -->
+<div class="w-full max-w-md mx-auto min-h-screen bg-surface flex flex-col relative shadow-xl pb-24">
+<!-- 1. TOP APP BAR (Shared Components JSON Anchor) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-surface-container-high shadow-sm sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-md mx-auto">
+<!-- Leading Ward G/N Identity -->
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center border border-outline-variant/30 text-on-surface">
+<span class="material-symbols-outlined text-[20px]" data-icon="location_city">location_city</span>
+</div>
+<div>
+<h1 class="text-on-surface dark:text-inverse-on-surface text-[15px] font-bold leading-tight tracking-tight">
+              Control Room - Ward G/N
+            </h1>
+
+</div>
+</div>
+<!-- Trailing Language & Notifications -->
+<div class="flex items-center gap-1.5">
+
+
+</div>
+</div>
+<!-- Page Title & Live Stream Metric Row -->
+<div class="px-4 pb-3 pt-1 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-on-surface text-[19px] font-bold tracking-tight">All Ward Bookings</h2>
+</div>
+
+</div>
+<!-- Live Stream Pill -->
+
+</div>
+</header>
+<!-- MAIN SCROLL CONTENT -->
+<main class="flex-1 px-4 pt-3 space-y-4">
+<!-- 2. SEARCH & FILTER CONTROLS -->
+<section class="flex items-center gap-2">
+<div class="relative flex-1">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="search">search</span>
+</span>
+<input class="w-full h-12 pl-10 pr-3.5 bg-surface-container-lowest text-[14px] text-on-surface placeholder:text-secondary border border-surface-container-high rounded-xl focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all outline-none" placeholder="Search contractor, #order or vehicle" type="search">
+</div>
+<button aria-label="Filter Options" class="h-12 w-12 flex-shrink-0 bg-surface-container-lowest border border-surface-container-high rounded-xl flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+</button>
+</section>
+<!-- 3. REQUEST STATUS TABS / HORIZONTAL SEGMENTED FILTER -->
+<nav aria-label="Status filters" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 -mx-4 px-4"><button class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-[13px] font-medium bg-surface-container-low text-secondary border border-surface-container-high hover:bg-surface-container transition-colors" type="button">All (25)</button><button class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-[13px] font-bold bg-primary-container text-on-surface shadow-xs flex items-center gap-1.5 transition-transform active:scale-95" type="button"><span>Needs Approval</span><span class="w-5 h-5 rounded-full bg-on-surface text-surface-container-lowest text-[11px] font-bold flex items-center justify-center">4</span></button><button class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-[13px] font-medium bg-surface-container-low text-secondary border border-surface-container-high hover:bg-surface-container flex items-center gap-1.5 transition-colors" type="button"><span class="w-1.5 h-1.5 rounded-full bg-error"></span><span>Not Matched (2)</span></button><button class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-[13px] font-medium bg-surface-container-low text-secondary border border-surface-container-high hover:bg-surface-container transition-colors" type="button">Active (18)</button><button class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-[13px] font-medium bg-surface-container-low text-secondary border border-surface-container-high hover:bg-surface-container transition-colors" type="button">Disputes (1)</button></nav>
+<!-- 4. REQUEST LIST (UNIFIED COMPACT CARD SYSTEM) -->
+<div class="space-y-3.5">
+<!-- REQUEST 1: PENDING APPROVAL (Amber accent) -->
+<article class="bg-surface-container-lowest border border-primary-container/60 rounded-xl p-4 shadow-sm relative overflow-hidden transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<!-- Card Header / Meta -->
+<div class="flex items-center justify-between pb-2 border-b border-surface-container"><div class="flex items-center gap-2"><span class="text-[13px] font-mono font-bold text-on-surface tracking-wider bg-surface-container-low px-2 py-0.5 rounded">BMC-8842</span><span class="text-[11px] font-bold text-primary bg-primary-fixed/40 px-2 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Awaiting Approval</span></div><span class="text-[11px] font-semibold text-secondary">Submitted 20m ago</span></div>
+<!-- Card Body -->
+<div class="pt-3 space-y-2">
+<!-- Contractor & Rating -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="text-[15px] font-bold text-on-surface">Sharma Infra &amp; Co.</span>
+
+</div>
+<span class="text-[13px] font-bold text-on-surface">Est. ₹23,200</span>
+</div>
+<!-- Equipment Type -->
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="front_loader">front_loader</span>
+<span class="text-[14px] font-semibold">2x JCB 3DX Backhoe Loader</span>
+</div>
+<!-- Location -->
+<div class="flex items-start gap-2 text-secondary text-[13px]">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5 flex-shrink-0" data-icon="pin_drop">pin_drop</span>
+<span class="line-clamp-1">Santacruz SV Road Storm Water Drain (Gate 3)</span>
+</div>
+<!-- Shift Schedule -->
+<div class="flex items-center gap-2 text-secondary text-[12px]">
+<span class="material-symbols-outlined text-[15px] text-secondary flex-shrink-0" data-icon="calendar_month">calendar_month</span>
+<span>Tomorrow, 24 Oct • 08:00 AM – 04:00 PM (8 hrs)</span>
+</div>
+</div>
+<!-- Card Action CTA -->
+<div class="mt-3.5 pt-2 border-t border-surface-container">
+<button class="w-full h-12 bg-primary-container hover:bg-primary-fixed-dim text-on-surface font-bold text-[14px] rounded-lg shadow-sm flex items-center justify-center gap-2 active:scale-98 transition-all" type="button">
+<span>Review &amp; Approve (1-Tap)</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- REQUEST 2: UNASSIGNED / PROVIDER UNAVAILABLE (Red/Orange alert accent) -->
+
+<!-- REQUEST 3: ACTIVE / WORKING (Green operational status) -->
+<article class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 shadow-sm relative overflow-hidden transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#1E9E5A]"></div>
+<!-- Card Header / Meta -->
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="text-[13px] font-mono font-bold text-on-surface tracking-wider bg-surface-container-low px-2 py-0.5 rounded">
+                BMC-8804
+              </span>
+<span class="text-[11px] font-bold text-[#1E9E5A] bg-[#1E9E5A]/10 px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#1E9E5A]"></span>
+                On-Site • Working Normal
+              </span>
+</div>
+<span class="text-[12px] font-mono font-semibold text-secondary">
+              MH-04-DK-2009
+            </span>
+</div>
+<!-- Card Body -->
+<div class="pt-3 space-y-2">
+<!-- Contractor & Subtitle -->
+<div class="flex items-center justify-between">
+<span class="text-[15px] font-bold text-on-surface">Mehta Constructions</span>
+<span class="text-[11px] text-secondary font-medium">Shift Day 2</span>
+</div>
+<!-- Equipment Type -->
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="local_shipping">local_shipping</span>
+<span class="text-[14px] font-semibold">1x Tata Prima 16T Tipper</span>
+</div>
+<!-- Operator GPS Info -->
+<div class="flex items-center gap-1.5 text-secondary text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-[#1E9E5A]" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface font-medium">Mahesh Shinde</span>
+<span class="text-secondary">• Verified GPS Check-in</span>
+</div>
+<!-- Shift Progress Bar -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between text-[11px] font-semibold text-secondary">
+<span>05:12 / 08:00 hrs</span>
+<span class="text-on-surface">65% shift complete</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-[#1E9E5A] h-2 rounded-full transition-all duration-500" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<!-- Card Action CTA: Outlined Secondary Button -->
+<div class="mt-3.5 pt-2 border-t border-surface-container">
+<button class="w-full h-11 bg-transparent border border-surface-container-high hover:bg-surface-container text-on-surface font-bold text-[13px] rounded-lg flex items-center justify-center gap-2 active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[17px] text-secondary" data-icon="map">map</span>
+<span>View Telematics &amp; Route</span>
+<span class="material-symbols-outlined text-[17px] text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- REQUEST 4: DISPUTE / BREAKDOWN (Critical Red Accent) -->
+<article class="bg-surface-container-lowest border border-error/40 rounded-xl p-4 shadow-sm relative overflow-hidden transition-all">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<!-- Card Header / Meta -->
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="text-[13px] font-mono font-bold text-on-surface tracking-wider bg-surface-container-low px-2 py-0.5 rounded">
+                BMC-8799
+              </span>
+<span class="text-[11px] font-bold text-error bg-error-container px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Dispute / Breakdown
+              </span>
+</div>
+<span class="text-[11px] font-bold text-error bg-error/10 px-2 py-0.5 rounded">
+              Replacement Pending
+            </span>
+</div>
+<!-- Card Body -->
+<div class="pt-3 space-y-2">
+<!-- Contractor/Fleet Details -->
+<div class="flex items-center justify-between">
+<span class="text-[15px] font-bold text-on-surface">BMC Direct Ward Ops</span>
+<span class="text-[12px] font-mono font-bold text-secondary">MH-02-EQ-8812</span>
+</div>
+<!-- Equipment Type -->
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-error text-[18px]" data-icon="car_crash">car_crash</span>
+<span class="text-[14px] font-semibold">JCB 3DX Plus</span>
+</div>
+<!-- Incident Soft Alert Card -->
+<div class="bg-error-container/40 border border-error-container rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error mt-0.5 flex-shrink-0" data-icon="report">report</span>
+<p class="text-[12px] text-on-surface leading-snug">
+<strong class="font-bold text-error">Breakdown:</strong> Machine stalled due to oil pressure alarm at 10:15 AM • Traffic obstruction at Pillar #42.
+              </p>
+</div>
+</div>
+<!-- Card Action CTA: Dominant Dark Charcoal (#1C1C1E) -->
+<div class="mt-3.5 pt-2 border-t border-surface-container">
+<button class="w-full h-12 bg-on-surface hover:bg-inverse-surface text-surface-container-lowest font-bold text-[14px] rounded-lg shadow-sm flex items-center justify-center gap-2 active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary-container" data-icon="sync_problem">sync_problem</span>
+<span>Reassign Fleet Immediately</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- 5. BOTTOM NAVIGATION BAR (Shared Components JSON Anchor) -->
+<!-- JSON Blueprint: 4 destinations ["Dashboard", "Requests", "Providers", "More"] -->
+<!-- Requests is ACTIVE with amber indicator dot and bold font -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest dark:bg-inverse-surface border-t border-surface-container-high shadow-[0_-4px_16px_rgba(0,0,0,0.06)] h-16 px-2 pb-safe">
+<div class="max-w-md mx-auto h-full flex justify-around items-center">
+<!-- Tab 1: Dashboard -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-on-surface-variant gap-1 py-1 px-3 hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-95" href="#dashboard">
+<span class="material-symbols-outlined text-[22px]" data-icon="dashboard">dashboard</span>
+<span class="text-[11px] font-medium leading-none">Dashboard</span>
+</a>
+<!-- Tab 2: Requests (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-on-surface dark:text-inverse-on-surface font-semibold gap-1 py-1 px-3 relative after:content-[''] after:w-1.5 after:h-1.5 after:bg-primary-container after:rounded-full after:mt-0.5 active:scale-95 transition-transform duration-100" href="#requests">
+<span class="material-symbols-outlined text-[22px] text-on-surface" data-icon="pending_actions" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">pending_actions</span>
+<span class="text-[11px] font-bold leading-none text-on-surface">Requests</span>
+</a>
+<!-- Tab 3: Providers -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-on-surface-variant gap-1 py-1 px-3 hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-95" href="#providers">
+<span class="material-symbols-outlined text-[22px]" data-icon="local_shipping">local_shipping</span>
+<span class="text-[11px] font-medium leading-none">Providers</span>
+</a>
+<!-- Tab 4: More -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-on-surface-variant gap-1 py-1 px-3 hover:bg-surface-container rounded-lg transition-colors duration-150 active:scale-95" href="#more">
+<span class="material-symbols-outlined text-[22px]" data-icon="more_horiz">more_horiz</span>
+<span class="text-[11px] font-medium leading-none">More</span>
+</a>
+</div>
+</nav>
+</div>
+
+
+
+
+
+
+
+
+</body></html>

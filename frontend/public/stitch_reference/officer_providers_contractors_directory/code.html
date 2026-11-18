@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Municipal Directory - Providers &amp; Contractors | BMC Officer</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Noto Sans Font via Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Verbatim Tailwind Config Injection -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#ffba35",
+            "surface-variant": "#e4e2e2",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f5f3f3",
+            "primary-fixed": "#ffdeac",
+            "on-tertiary-fixed": "#1a1c1c",
+            "status-info": "#2563EB",
+            "surface": "#fbf9f8",
+            "primary-container": "#ffb400",
+            "surface-container": "#efeded",
+            "secondary-container": "#e2dfe1",
+            "secondary": "#5f5e60",
+            "tertiary-fixed": "#e2e2e2",
+            "on-secondary-fixed": "#1b1b1d",
+            "on-primary-fixed-variant": "#5f4100",
+            "primary": "#7e5700",
+            "status-error": "#D93025",
+            "on-secondary-container": "#636264",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#c8c6c8",
+            "primary-fixed-dim": "#ffba35",
+            "surface-bright": "#fbf9f8",
+            "tertiary": "#5d5f5f",
+            "text-primary": "#1C1C1E",
+            "on-tertiary-fixed-variant": "#454747",
+            "surface-container-high": "#e9e8e7",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "status-warning": "#E67E22",
+            "outline-variant": "#d6c4ac",
+            "secondary-fixed": "#e4e2e4",
+            "on-background": "#1b1c1c",
+            "background": "#fbf9f8",
+            "tertiary-container": "#c1c2c2",
+            "on-tertiary-container": "#4e5050",
+            "surface-dim": "#dbdad9",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f2f0f0",
+            "on-surface-variant": "#514532",
+            "inverse-surface": "#303031",
+            "stroke-card": "#E5E5EA",
+            "status-success": "#1E9E5A",
+            "on-secondary-fixed-variant": "#474649",
+            "on-surface": "#1b1c1c",
+            "on-tertiary": "#ffffff",
+            "text-muted": "#6B6B6B",
+            "surface-base": "#FFFFFF",
+            "surface-tint": "#7e5700",
+            "surface-card": "#F5F5F5",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "outline": "#847560",
+            "on-primary-fixed": "#281900",
+            "on-primary-container": "#6b4900",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e4e2e2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "button-text": ["Noto Sans"],
+            "display-code": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "label-sm": ["Noto Sans"],
+            "title-sm": ["Noto Sans"],
+            "headline-md": ["Noto Sans"],
+            "headline-lg": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "body-md": ["Noto Sans"]
+          },
+          "fontSize": {
+            "button-text": ["18px", {"lineHeight": "24px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+            "display-code": ["36px", {"lineHeight": "44px", "letterSpacing": "4px", "fontWeight": "700"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.2px", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "18px", "fontWeight": "500"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Safe bottom offset for Android-first one-handed ergonomics */
+    .pb-safe-action {
+      padding-bottom: 5.5rem;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen selection:bg-primary-container selection:text-text-primary font-body-md text-body-md">
+<div class="max-w-md mx-auto min-h-screen bg-surface-base flex flex-col relative pb-safe-action shadow-2xl">
+<!-- TopAppBar as per Shared Components JSON -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-stroke-card dark:border-outline-variant shadow-sm sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary dark:text-inverse-primary border border-stroke-card">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="location_city">location_city</span>
+</div>
+<div>
+<div class="text-title-sm font-title-sm font-bold text-on-surface dark:text-inverse-on-surface tracking-tight leading-tight">
+              Control Room - Ward G/N
+            </div>
+
+</div>
+</div>
+<div class="flex items-center gap-1">
+
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 pt-3 flex flex-col gap-4">
+<!-- Key Metric Strip: Quick Status Bar -->
+<section class="bg-surface-card border border-stroke-card rounded-xl p-3 shadow-sm">
+<div class="grid grid-cols-3 divide-x divide-stroke-card text-center">
+<div class="px-1">
+<div class="text-headline-md font-headline-md font-bold text-text-primary">42</div>
+<div class="text-label-sm font-label-sm text-text-muted">Registered Providers</div>
+</div>
+<div class="px-1">
+<div class="text-headline-md font-headline-md font-bold text-text-primary">18</div>
+<div class="text-label-sm font-label-sm text-text-muted">Civil Contractors</div>
+</div>
+<div class="px-1">
+<div class="text-headline-md font-headline-md font-bold text-status-success">98.4%</div>
+<div class="text-label-sm font-label-sm text-text-muted">Compliance Rate</div>
+</div>
+</div>
+</section>
+<!-- Segmented Control (Providers vs Contractors) -->
+<section class="w-full">
+<div class="grid grid-cols-2 p-1 bg-surface-card rounded-xl border border-stroke-card" role="tablist"><button aria-selected="true" class="h-12 rounded-lg bg-surface-base border border-stroke-card shadow-sm text-text-primary font-bold text-label-md flex items-center justify-center gap-2 transition-all" role="tab">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Providers (42)</span>
+</button>
+<button aria-selected="false" class="h-12 rounded-lg text-text-primary hover:bg-surface-base font-semibold text-label-md flex items-center justify-center transition-all" role="tab">
+<span>Contractors (18)</span>
+</button></div>
+</section>
+<!-- Search Field with Tactile Trigger -->
+<section class="relative">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-text-muted text-xl" data-icon="search">search</span>
+<input class="w-full h-14 pl-12 pr-12 bg-surface-card border border-stroke-card rounded-xl text-body-md font-body-md placeholder:text-text-muted focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all" placeholder="Search by firm, vendor ID, or machinery..." type="text">
+<button aria-label="Open Filters" class="absolute right-2 w-10 h-10 rounded-lg flex items-center justify-center text-text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="tune">tune</span>
+</button>
+</div>
+</section>
+<!-- Horizontal Quick Filter Chips (One-Thumb Scrolling) -->
+<section class="overflow-x-auto -mx-4 px-4 flex items-center gap-2 no-scrollbar py-0.5"><button class="h-12 px-4 rounded-full bg-surface-base text-text-primary font-bold border-2 border-primary-container text-label-md shrink-0 flex items-center gap-1.5 shadow-sm">
+<span>All (42)</span>
+</button>
+<button class="h-12 px-4 rounded-full bg-surface-card text-text-primary font-semibold hover:bg-surface-container border border-stroke-card text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span>Grade A (28)</span>
+</button>
+<button class="h-12 px-4 rounded-full bg-surface-card text-text-primary font-semibold hover:bg-surface-container border border-stroke-card text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="w-2 h-2 rounded-full bg-status-error"></span>
+<span>Papers Expired (3)</span>
+</button>
+<button class="h-12 px-4 rounded-full bg-surface-card text-text-primary font-semibold hover:bg-surface-container border border-stroke-card text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span>Under Review (1)</span>
+</button></section>
+<!-- Provider List Container (Industrial Hierarchy) -->
+<section class="flex flex-col gap-3.5 pb-2">
+<!-- CARD 1: Mahalaxmi Earthmovers & Fleet -->
+<article class="bg-surface-base border border-stroke-card rounded-2xl p-4 shadow-sm hover:border-primary-container transition-all"><div class="flex justify-between items-start gap-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-title-sm font-title-sm font-bold text-text-primary">Mahalaxmi Earthmovers &amp; Fleet</h2>
+</div>
+<p class="text-label-sm font-label-sm text-text-primary font-medium mt-0.5">
+                Kurla West Depot • <span class="font-mono font-bold text-text-primary">#BMC-KRL-8492</span>
+</p>
+</div>
+<button aria-label="More actions" class="w-10 h-10 rounded-lg flex items-center justify-center text-text-primary hover:bg-surface-card transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Badges & Compliance Row -->
+<div class="flex flex-wrap items-center gap-2 mt-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm font-bold text-text-primary border border-stroke-card">
+<span class="material-symbols-outlined text-primary-container text-base" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+              Grade A • 4.9
+            </span>
+
+
+</div>
+<!-- Performance Metrics Bento Bar -->
+
+<!-- High Physical Affordance Actions (56px h-14) -->
+<div class="grid grid-cols-2 gap-2 mt-3.5">
+<button class="h-14 px-3 rounded-xl border-2 border-stroke-card bg-surface-base hover:bg-surface-card text-text-primary text-label-md font-bold flex items-center justify-center gap-1.5 transition-all active:scale-98 shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="inventory_2">inventory_2</span>
+<span>Inspect Fleet (12)</span>
+</button>
+<button class="h-14 px-3 rounded-xl bg-primary-container hover:bg-primary-fixed-dim text-text-primary text-label-md font-bold border-2 border-primary-container flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-98">
+<span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+<span>Call (Masked)</span>
+</button>
+</div></article>
+<!-- CARD 2: Bandra Infra Heavy Machineries -->
+<article class="bg-surface-base border border-stroke-card rounded-2xl p-4 shadow-sm hover:border-primary-container transition-all"><div class="flex justify-between items-start gap-2">
+<div>
+<h2 class="text-title-sm font-title-sm font-bold text-text-primary">Bandra Infra Heavy Machineries</h2>
+<p class="text-label-sm font-label-sm text-text-primary font-medium mt-0.5">
+                Bandra East Depot • <span class="font-mono font-bold text-text-primary">#BMC-BDR-1094</span>
+</p>
+</div>
+<button aria-label="More actions" class="w-10 h-10 rounded-lg flex items-center justify-center text-text-primary hover:bg-surface-card transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Badges & Compliance Row -->
+<div class="flex flex-wrap items-center gap-2 mt-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm font-bold text-text-primary border border-stroke-card">
+<span class="material-symbols-outlined text-primary text-base" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+              Grade B • 4.2★
+            </span>
+
+
+</div>
+<!-- Metrics Bento Bar -->
+
+<!-- Action Buttons (56px h-14) -->
+<div class="grid grid-cols-2 gap-2 mt-3.5">
+<button class="h-14 px-3 rounded-xl border-2 border-stroke-card bg-surface-base hover:bg-surface-card text-text-primary text-label-md font-bold flex items-center justify-center gap-1.5 transition-all active:scale-98 shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="inventory_2">inventory_2</span>
+<span>Inspect Fleet (6)</span>
+</button>
+<button class="h-14 px-3 rounded-xl bg-surface-card border-2 border-stroke-card hover:bg-surface-container text-text-primary text-label-md font-bold flex items-center justify-center gap-1.5 transition-all active:scale-98 shadow-sm">
+<span class="material-symbols-outlined text-xl text-primary" data-icon="phone_in_talk">phone_in_talk</span>
+<span>Call Dispatch</span>
+</button>
+</div></article>
+<!-- CARD 3: Sion Civil Equipment Yard (Compliance Lapsed Alert Card) -->
+
+</section>
+<!-- Persistent Floating Context Action -->
+<section class="mt-2 mb-4">
+<button class="w-full h-14 bg-surface-card border-2 border-stroke-card rounded-xl text-text-primary font-bold text-label-md flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors shadow-sm active:scale-98">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="add_circle">add_circle</span>
+<span>+ Register New Machinery Vendor</span>
+</button>
+</section>
+</main>
+<!-- Bottom Navigation Bar as per Shared Components JSON -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-base dark:bg-inverse-surface border-t border-stroke-card dark:border-outline-variant shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+<div class="flex justify-around items-center h-16 px-2 pb-safe max-w-md mx-auto"><!-- Tab 1: Dashboard -->
+<button aria-label="Dashboard" class="h-14 flex-1 flex flex-col items-center justify-center text-text-primary dark:text-inverse-on-surface gap-0.5 hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-150 active:scale-95 px-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+<span class="text-label-sm font-medium">Dashboard</span>
+</button>
+<!-- Tab 2: Requests -->
+<button aria-label="Requests" class="h-14 flex-1 flex flex-col items-center justify-center text-text-primary dark:text-inverse-on-surface gap-0.5 hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-150 active:scale-95 px-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl" data-icon="pending_actions">pending_actions</span>
+<span class="text-label-sm font-medium">Requests</span>
+</button>
+<!-- Tab 3: Providers (ACTIVE) -->
+<button aria-current="page" aria-label="Providers" class="h-14 flex-1 flex flex-col items-center justify-center text-text-primary dark:text-inverse-on-surface font-bold gap-0.5 relative after:content-[''] after:w-1.5 after:h-1.5 after:bg-primary-container after:rounded-full active:scale-95 transition-transform duration-100 px-2">
+<span class="material-symbols-outlined text-2xl text-text-primary" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">local_shipping</span>
+<span class="text-label-sm font-bold">Providers</span>
+</button>
+<!-- Tab 4: More -->
+<button aria-label="More" class="h-14 flex-1 flex flex-col items-center justify-center text-text-primary dark:text-inverse-on-surface gap-0.5 hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-150 active:scale-95 px-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl" data-icon="more_horiz">more_horiz</span>
+<span class="text-label-sm font-medium">More</span>
+</button></div>
+</nav>
+</div>
+
+
+
+
+
+
+</body></html>

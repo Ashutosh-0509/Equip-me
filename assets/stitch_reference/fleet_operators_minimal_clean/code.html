@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>BMC Fleet Ops - Fleet &amp; Operators</title>
+<!-- Google Fonts: Noto Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e4e2e2",
+            "secondary-fixed-dim": "#c8c6c8",
+            "surface-container-high": "#e9e8e7",
+            "on-background": "#1b1c1c",
+            "on-tertiary-container": "#4e5050",
+            "surface-container-low": "#f5f3f3",
+            "inverse-primary": "#ffba35",
+            "on-tertiary-fixed": "#1a1c1c",
+            "inverse-on-surface": "#f2f0f0",
+            "surface-tint": "#7e5700",
+            "background": "#fbf9f8",
+            "primary-fixed": "#ffdeac",
+            "on-tertiary-fixed-variant": "#454747",
+            "inverse-surface": "#303031",
+            "surface-dim": "#dbdad9",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#c1c2c2",
+            "surface-container": "#efeded",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#514532",
+            "primary-container": "#ffb400",
+            "surface-bright": "#fbf9f8",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#474649",
+            "on-surface": "#1b1c1c",
+            "on-secondary-container": "#636264",
+            "on-secondary-fixed": "#1b1b1d",
+            "outline-variant": "#d6c4ac",
+            "outline": "#847560",
+            "secondary-container": "#e2dfe1",
+            "surface-variant": "#e4e2e2",
+            "tertiary-fixed": "#e2e2e2",
+            "on-primary-fixed-variant": "#5f4100",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "primary": "#7e5700",
+            "surface": "#fbf9f8",
+            "on-primary-container": "#6b4900",
+            "secondary-fixed": "#e4e2e4",
+            "on-primary-fixed": "#281900",
+            "secondary": "#5f5e60",
+            "tertiary": "#5d5f5f",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#ffba35"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            headline: ["Noto Sans", "sans-serif"],
+            display: ["Noto Sans", "sans-serif"],
+            body: ["Noto Sans", "sans-serif"],
+            label: ["Noto Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-surface">
+<!-- Mobile Screen Container (360px - 430px optimal mobile view canvas) -->
+<div class="min-h-screen max-w-md mx-auto bg-surface-container-lowest flex flex-col relative pb-28">
+<!-- Top Sticky Shell / App Bar -->
+<header class="sticky top-0 z-40 bg-surface-container-lowest border-b border-surface-container-high px-4 pt-3 pb-3">
+<div class="flex items-center justify-between">
+<!-- Brand & Context -->
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+</div>
+<h1 class="text-lg font-bold text-on-surface leading-tight tracking-tight">Fleet &amp; Operators</h1>
+
+</div>
+</div>
+<!-- Action Icons -->
+<div class="flex items-center gap-1">
+<button aria-label="Search equipment" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</button>
+
+</div>
+</div>
+<!-- 2-Tab Segmented Switcher (Zero Empty Space) -->
+<nav aria-label="Inventory Segments" class="mt-3.5 p-1 bg-surface-container-low rounded-xl flex items-center gap-1">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-semibold text-sm shadow-sm flex items-center justify-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span>Vehicles (8)</span>
+</button>
+<button class="flex-1 py-2 rounded-lg text-secondary font-medium text-sm flex items-center justify-center gap-1.5 hover:text-on-surface transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="group">group</span>
+<span>Operators (6)</span>
+</button>
+</nav>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-4 pt-4 space-y-4">
+<!-- Fleet Quick KPI Metrics (Row of 3 compact cards) -->
+<section aria-label="Fleet Availability Status" class="grid grid-cols-3 gap-2.5">
+<!-- 5 Available -->
+<div class="bg-surface-container-low border border-surface-container-high rounded-xl p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-secondary">Free</span>
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+</div>
+<div class="mt-1">
+<div class="text-2xl font-bold text-on-surface tracking-tight">5</div>
+<div class="text-[11px] font-medium text-emerald-700 leading-tight">Available</div>
+</div>
+</div>
+<!-- 2 On Shift -->
+<div class="bg-surface-container-low border border-surface-container-high rounded-xl p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-secondary">Booked</span>
+<span class="w-2 h-2 rounded-full bg-blue-600"></span>
+</div>
+<div class="mt-1">
+<div class="text-2xl font-bold text-on-surface tracking-tight">2</div>
+<div class="text-[11px] font-medium text-blue-700 leading-tight">On Shift</div>
+</div>
+</div>
+<!-- 1 Maintenance -->
+
+</section>
+<!-- Primary Action: Add Machine -->
+<div>
+<button class="w-full h-12 bg-primary-container text-on-surface font-semibold text-base rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-150 shadow-sm hover:brightness-105" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="add">add</span>
+<span>+ Add Machine</span>
+</button>
+</div>
+<!-- Vehicle Registry Section Header -->
+<div class="flex items-center justify-between pt-1">
+<h2 class="text-sm font-bold tracking-tight text-on-surface flex items-center gap-1.5">
+<span>Active Units</span>
+
+</h2>
+<button class="text-xs font-semibold text-secondary hover:text-on-surface flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+<span>Filter</span>
+</button>
+</div>
+<!-- Vehicle List Container -->
+<section aria-label="Vehicles List" class="space-y-3.5">
+<!-- CARD 1: JCB 3DX Backhoe (Available) -->
+<article class="bg-surface-container-lowest border border-surface-container-high rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
+<!-- Top Row: Thumbnail + Title + Status -->
+<div class="flex items-start gap-3">
+<img class="w-16 h-16 rounded-xl object-cover bg-surface-container-low border border-surface-container-high flex-shrink-0" data-alt="A clean, heavy-duty industrial JCB backhoe loader parked in an open civil equipment yard under bright daylight. The machine features clean yellow construction paint with hydraulic arms resting smoothly, captured in a modern technical product photography style with stark clarity and neutral white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiv77jTxh5lu1rQC31sVdPYClnerNmt4zVU9PT9mm7l-_4ys8Zp9kBUvlImsUiL1djrw6I1vK8-P5PrzWKAbw6h8W5DEmIfBtFgVDGewSuzZp5NfIJOHhO9dhaEGqhS4e4jls9bZgiCtm-IeEmzOSxQbe1HTn-55_5_MdvhEycEH_Uap9akYfIJO1n5vCueioIQzkKsimnRxjuYX4BL9nciGzqSWR_1Mc0ZQOEWw">
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="text-base font-bold text-on-surface truncate">JCB 3DX EcoXpert</h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-full flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  Available
+                </span>
+</div>
+<p class="text-xs font-medium text-secondary mt-0.5">Reg: <span class="font-bold text-on-surface">MH-02-EQ-4491</span></p>
+
+</div>
+</div>
+<!-- Divider -->
+<div class="my-3 border-t border-surface-container-high/80"></div>
+<!-- Rates & Operator Details -->
+<div class="flex items-center justify-between pt-1"><div class="flex items-baseline gap-1"><span class="text-base font-bold text-on-surface">₹1,450</span><span class="text-xs font-normal text-secondary">/ hr</span></div><button class="h-8 px-3 rounded-lg border border-surface-container-high hover:bg-surface-container-low text-on-surface font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors active:scale-95 duration-150" type="button"><span class="material-symbols-outlined text-[16px]" data-icon="edit_note">edit_note</span><span>Edit Rates</span></button></div>
+<!-- Quick Action Buttons (2 equal columns) -->
+
+</article>
+<!-- CARD 2: Tata Prima Tipper (Booked / On Shift) -->
+<article class="bg-surface-container-lowest border border-surface-container-high rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
+<!-- Top Row: Thumbnail + Title + Status -->
+<div class="flex items-start gap-3">
+<img class="w-16 h-16 rounded-xl object-cover bg-surface-container-low border border-surface-container-high flex-shrink-0" data-alt="A heavy civil engineering Tata Prima tipper dump truck stationed on an urban infrastructure project in Mumbai. The vehicle is finished in industrial metallic paint with heavy off-road tires, shot under crisp daylight with high tonal contrast and clean architectural details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPUUG0g_xpDLX2Gq3jf8qbsmel2fE4ruD5YZCwGBc7A54LQF3hoyKFxmhMP_fiP7VIE18tP_N1yYyOzZ8DFibggWhi-bWJdUu6pUDpAwsZ5VG2fLaWjdY5skcyBcLn5tTanLBAflD3HMZ5E_PA8-0orhQ6UwMdc2MBpOz609zAxklx8zncPhoDusfkKG9LOeVjJ_-_odigbgDcjaQ70CuXs91jlQeVTEaImzdD_A">
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="text-base font-bold text-on-surface truncate">Tata Prima 16T Tipper</h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-800 bg-blue-50 border border-blue-200/80 px-2 py-0.5 rounded-full flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                  Booked
+                </span>
+</div>
+<p class="text-xs font-medium text-secondary mt-0.5">Reg: <span class="font-bold text-on-surface">MH-04-DK-2009</span></p>
+
+</div>
+</div>
+<!-- Divider -->
+<div class="my-3 border-t border-surface-container-high/80"></div>
+<!-- Rates & Operator Details -->
+<div class="flex items-center justify-between pt-1"><div class="flex items-baseline gap-1"><span class="text-base font-bold text-on-surface">₹1,550</span><span class="text-xs font-normal text-secondary">/ hr</span></div><button class="h-8 px-3 rounded-lg border border-surface-container-high hover:bg-surface-container-low text-on-surface font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors active:scale-95 duration-150" type="button"><span class="material-symbols-outlined text-[16px]" data-icon="edit_note">edit_note</span><span>Edit Rates</span></button></div>
+<!-- Quick Action Buttons -->
+
+</article>
+<!-- CARD 3: CAT 320D Excavator (Maintenance / Yard) -->
+
+</section>
+<!-- Bottom Micro-Card: Operational Compliance Note -->
+
+</main>
+<!-- Bottom Navigation Bar (Docked Provider Suite - Fleet Active) -->
+<nav aria-label="Main Navigation" class="fixed bottom-0 left-0 w-full z-50 h-16 flex justify-around items-center px-4 bg-surface-container-lowest border-t border-surface-container-high shadow-md">
+<!-- Item 1: Requests -->
+<a class="flex flex-col items-center justify-center text-secondary font-medium gap-1 hover:bg-surface-container-low transition-colors active:scale-95 duration-150 py-1 px-3 rounded-lg" href="#requests">
+<span class="material-symbols-outlined text-2xl" data-icon="assignment">assignment</span>
+<span class="text-xs leading-none">Requests</span>
+</a>
+<!-- Item 2: Schedule -->
+<a class="flex flex-col items-center justify-center text-secondary font-medium gap-1 hover:bg-surface-container-low transition-colors active:scale-95 duration-150 py-1 px-3 rounded-lg" href="#schedule">
+<span class="material-symbols-outlined text-2xl" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs leading-none">Schedule</span>
+</a>
+<!-- Item 3: Fleet (STRICT ACTIVE MAPPING TO SCREEN 35) -->
+<a class="flex flex-col items-center justify-center text-on-surface font-semibold gap-1 relative after:w-1.5 after:h-1.5 after:bg-primary-container after:rounded-full after:mt-0.5 active:scale-95 duration-150 py-1 px-3 rounded-lg" href="#fleet">
+<span class="material-symbols-outlined text-2xl text-on-surface" data-icon="precision_manufacturing" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">precision_manufacturing</span>
+<span class="text-xs leading-none text-on-surface">Fleet</span>
+</a>
+<!-- Item 4: Profile -->
+<a class="flex flex-col items-center justify-center text-secondary font-medium gap-1 hover:bg-surface-container-low transition-colors active:scale-95 duration-150 py-1 px-3 rounded-lg" href="#profile">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="text-xs leading-none">Profile</span>
+</a>
+</nav>
+</div>
+
+
+
+
+
+
+
+
+</body></html>

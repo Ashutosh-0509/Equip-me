@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BMC Operator - Live Shift</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: "#FFB400",
+              secondary: "#1C1C1E",
+              bg: "#F5F5F5",
+              surface: "#FFFFFF",
+              muted: "#6B6B6B",
+              border: "#E5E5EA",
+              success: "#15803D",
+              danger: "#DC2626"
+            }
+          },
+          fontFamily: {
+            sans: ["Noto Sans", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .tabular-timer {
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum";
+    }
+  </style>
+</head>
+<body class="bg-[#F5F5F5] text-[#1C1C1E] min-h-screen flex flex-col font-sans antialiased selection:bg-[#FFB400] selection:text-[#1C1C1E] pb-36">
+<!-- 1. COMPACT HEADER -->
+<header class="bg-white border-b border-[#E5E5EA] sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-4 h-14 max-w-md mx-auto">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-[#FFB400]/15 flex items-center justify-center text-[#1C1C1E]">
+<!-- Lucide Wrench Icon -->
+<svg class="w-4 h-4 text-[#1C1C1E]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-[15px] font-bold text-[#1C1C1E] leading-tight">BMC Operator</span>
+<span class="text-[11px] font-mono font-medium text-[#6B6B6B] leading-none mt-0.5">#BMC-8842-JCB</span>
+</div>
+</div>
+
+</div>
+</header>
+<!-- 2. LIVE SHIFT STATUS INDICATOR -->
+<div class="w-full bg-[#15803D] text-white py-1.5 px-4 shadow-sm">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+</span>
+<span class="text-[11px] font-bold tracking-wider uppercase">Work In Progress • Machine Operational</span>
+</div>
+
+</div>
+</div>
+<!-- MAIN OPERATIONAL VIEWPORT -->
+<main class="w-full max-w-md mx-auto px-4 flex-1 flex flex-col gap-3 pt-4">
+<!-- 3. LIVE SHIFT TIMER CARD -->
+<section class="bg-white border border-[#E5E5EA] rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between text-[#6B6B6B] mb-1">
+<div class="flex items-center gap-1.5">
+<svg class="w-4 h-4 text-[#FFB400]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+<span class="text-[11px] font-bold tracking-wider uppercase text-[#1C1C1E]">Elapsed Work Time</span>
+</div>
+
+</div>
+<!-- Tabular Digital Timer -->
+<div class="my-1.5 text-center">
+<span class="font-bold text-[36px] tracking-tight text-[#1C1C1E] tabular-timer leading-none inline-block py-1" id="shiftTimer">03:56:07</span>
+</div>
+<!-- Shift Target Progress Bar -->
+<div class="pt-2 border-t border-[#F0F0F2]">
+<div class="flex justify-between items-center text-[12px] mb-1.5 font-medium">
+<span class="text-[#6B6B6B]">Shift Target Progress</span>
+<span class="font-bold text-[#1C1C1E]">46% </span>
+</div>
+<div class="w-full h-2.5 bg-[#E5E5EA] rounded-full overflow-hidden">
+<div class="h-full bg-[#FFB400] rounded-full transition-all duration-300" style="width: 46%;"></div>
+</div>
+</div>
+</section>
+<!-- 4. ASSIGNED EQUIPMENT CARD -->
+<section class="bg-white border border-[#E5E5EA] rounded-xl px-4 py-3 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-[#F5F5F5] border border-[#E5E5EA] flex items-center justify-center text-[#1C1C1E] shrink-0">
+<!-- Construction/Truck Equipment SVG -->
+<svg class="w-5 h-5 text-[#1C1C1E]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect height="13" rx="2" width="15" x="1" y="5"></rect>
+<polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+<circle cx="5.5" cy="18.5" r="2.5"></circle>
+<circle cx="18.5" cy="18.5" r="2.5"></circle>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-[11px] font-medium text-[#6B6B6B] uppercase tracking-wider">Assigned Equipment</span>
+<span class="text-[15px] font-semibold text-[#1C1C1E] leading-snug">JCB 3DX EcoExpert</span>
+</div>
+</div>
+<span class="px-2 py-1 bg-[#F5F5F5] text-[#1C1C1E] text-[12px] font-mono font-semibold rounded border border-[#E5E5EA]">
+        MH-02-EQ-4491
+      </span>
+</section>
+<!-- 5. ASSIGNED WORK SITE CARD -->
+<section class="bg-white border border-[#E5E5EA] rounded-xl p-3.5 shadow-sm flex flex-col gap-2.5">
+<div class="flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-md bg-[#FFB400]/15 flex items-center justify-center text-[#1C1C1E] shrink-0 mt-0.5">
+<!-- Map Pin SVG -->
+<svg class="w-4 h-4 text-[#1C1C1E]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+</div>
+<div class="flex-1">
+<span class="text-[11px] font-medium uppercase tracking-wider text-[#6B6B6B] block">Assigned Work Site</span>
+<p class="text-[15px] font-semibold text-[#1C1C1E] leading-snug mt-0.5">Santacruz SV Road Storm Water Drain, Gate 3</p>
+</div>
+</div>
+<!-- Authorization Row -->
+
+</section><section class="bg-white border border-[#E5E5EA] rounded-xl p-4 shadow-sm flex flex-col gap-3"><div class="flex items-center justify-between border-b border-[#F0F0F2] pb-2.5"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#15803D]"></span><span class="text-[11px] font-bold uppercase tracking-wider text-[#6B6B6B]">Supervisor On Duty</span></div><span class="text-[12px] font-medium text-[#1C1C1E]">Ward K/W - Zone 2</span></div><div class="flex items-center justify-between"><div class="flex flex-col"><span class="text-[14px] font-semibold text-[#1C1C1E]">Rajesh V. Sharma</span><span class="text-[11px] font-mono text-[#6B6B6B]">+91 98201 44521</span></div><span class="px-2.5 py-1 bg-[#F5F5F5] rounded text-[11px] font-semibold text-[#1C1C1E] border border-[#E5E5EA]">Shift Lead</span></div><div class="bg-[#F5F5F5] rounded-lg p-2.5 text-[12px] text-[#6B6B6B] leading-snug flex items-start gap-2"><svg class="w-4 h-4 text-[#FFB400] shrink-0 mt-0.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg><span>Ensure fuel log is updated and hydraulic pressure verified before requesting handover code.</span></div></section>
+<!-- 6. TACTICAL ACTIONS (3 full-width action rows, 50-52px height) -->
+
+</main>
+<!-- 7. SHIFT COMPLETION ACTION (STICKY ABOVE BOTTOM NAV) -->
+<div class="fixed bottom-16 left-0 w-full bg-white/95 backdrop-blur-md border-t border-[#E5E5EA] px-4 py-2.5 z-30 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+<div class="max-w-md mx-auto flex flex-col items-center">
+<button class="w-full h-[52px] bg-[#FFB400] hover:bg-[#e6a200] active:scale-[0.99] text-[#1C1C1E] font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all" onclick="handleShiftComplete()" type="button">
+<!-- Check Square Icon -->
+<svg class="w-5 h-5 text-[#1C1C1E]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<polyline points="9 11 12 14 22 4"></polyline>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+</svg>
+<span class="text-[15px] font-bold tracking-tight">Shift Complete • Request End Code</span>
+<svg class="w-4 h-4 text-[#1C1C1E] ml-0.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</button>
+
+</div>
+</div>
+<!-- 8. BOTTOM NAVIGATION (PERSISTENT 3 TABS) -->
+<nav class="fixed bottom-0 left-0 w-full z-40 h-16 flex justify-around items-center px-4 bg-white border-t border-[#E5E5EA]">
+<!-- Active Nav: Today -->
+<a class="flex flex-col items-center justify-center text-[#1C1C1E] font-bold py-1 w-1/3 active:scale-95 transition-all" href="#">
+<svg class="w-5 h-5 text-[#1C1C1E]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="24">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span class="text-[11px] font-bold mt-1">Today</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#FFB400] mt-0.5"></span>
+</a>
+<!-- Inactive Nav: History -->
+<a class="flex flex-col items-center justify-center text-[#6B6B6B] hover:text-[#1C1C1E] font-medium py-1 w-1/3 active:scale-95 transition-all" href="#">
+<svg class="w-5 h-5 text-[#6B6B6B]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 14 14"></polyline>
+<path d="M3.05 11a9 9 0 0 1 1.7-4.2"></path>
+</svg>
+<span class="text-[11px] font-medium mt-1">History</span>
+<span class="w-1.5 h-1.5 mt-0.5"></span>
+</a>
+<!-- Inactive Nav: Profile -->
+<a class="flex flex-col items-center justify-center text-[#6B6B6B] hover:text-[#1C1C1E] font-medium py-1 w-1/3 active:scale-95 transition-all" href="#">
+<svg class="w-5 h-5 text-[#6B6B6B]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+<circle cx="12" cy="7" r="4"></circle>
+</svg>
+<span class="text-[11px] font-medium mt-1">Profile</span>
+<span class="w-1.5 h-1.5 mt-0.5"></span>
+</a>
+</nav>
+<!-- LIVE TIMER TICKER SCRIPT -->
+<script>
+    let seconds = 11;
+    let minutes = 54;
+    let hours = 3;
+
+    function updateTimer() {
+      seconds++;
+      if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+          minutes = 0;
+          hours++;
+        }
+      }
+      const hh = String(hours).padStart(2, '0');
+      const mm = String(minutes).padStart(2, '0');
+      const ss = String(seconds).padStart(2, '0');
+      
+      const timerElement = document.getElementById('shiftTimer');
+      if (timerElement) {
+        timerElement.textContent = `${hh}:${mm}:${ss}`;
+      }
+    }
+
+    setInterval(updateTimer, 1000);
+
+    function handleShiftComplete() {
+      alert("Shift completion initiated. Requesting 4-digit supervisor handover code...");
+    }
+  </script>
+
+
+
+
+</body></html>

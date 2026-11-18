@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Provider Daily Schedule - BMC Fleet Ops</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#454747",
+            "secondary": "#5f5e60",
+            "tertiary-fixed": "#e2e2e2",
+            "primary-container": "#ffb400",
+            "primary-fixed": "#ffdeac",
+            "on-background": "#1b1c1c",
+            "secondary-container": "#e2dfe1",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#e4e2e2",
+            "primary-fixed-dim": "#ffba35",
+            "background": "#fbf9f8",
+            "surface-variant": "#e4e2e2",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-secondary-fixed-variant": "#474649",
+            "secondary-fixed-dim": "#c8c6c8",
+            "surface-dim": "#dbdad9",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#1a1c1c",
+            "inverse-primary": "#ffba35",
+            "on-primary-fixed": "#281900",
+            "on-secondary-fixed": "#1b1b1d",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#efeded",
+            "on-primary-fixed-variant": "#5f4100",
+            "primary": "#7e5700",
+            "outline": "#847560",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#514532",
+            "on-primary": "#ffffff",
+            "tertiary": "#5d5f5f",
+            "surface-bright": "#fbf9f8",
+            "outline-variant": "#d6c4ac",
+            "on-tertiary-container": "#4e5050",
+            "surface-container-high": "#e9e8e7",
+            "surface-tint": "#7e5700",
+            "inverse-surface": "#303031",
+            "on-primary-container": "#6b4900",
+            "on-secondary-container": "#636264",
+            "on-surface": "#1b1c1c",
+            "inverse-on-surface": "#f2f0f0",
+            "tertiary-container": "#c1c2c2",
+            "surface": "#fbf9f8",
+            "secondary-fixed": "#e4e2e4",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f5f3f3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Noto Sans", "sans-serif"],
+            "display": ["Noto Sans", "sans-serif"],
+            "body": ["Noto Sans", "sans-serif"],
+            "label": ["Noto Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f5f5f3] text-[#1c1c1e] min-h-screen flex justify-center selection:bg-primary-container selection:text-on-surface">
+<!-- Mobile Viewport Container (Android max-width ergonomic frame) -->
+<div class="w-full max-w-md bg-[#ffffff] min-h-screen flex flex-col relative shadow-xl overflow-x-hidden">
+<!-- 1. Top Bar (Shared Component: TopAppBar compliant) -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-4 pt-3 pb-2.5 border-b border-surface-container-high/60 transition-shadow">
+<!-- Main Row -->
+<div class="flex justify-between items-center w-full h-12">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px] text-[#1c1c1e]" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<div class="text-[11px] font-semibold text-secondary uppercase tracking-wider leading-none">BMC Fleet Ops</div>
+<h1 class="text-[18px] font-bold text-on-surface tracking-tight leading-tight">Fleet Schedule</h1>
+</div>
+</div>
+<!-- Trailing Notifications -->
+
+</div>
+<!-- Compact Secondary Controls: Month Selector & Action -->
+
+</header>
+<!-- Main Scrollable Canvas Area -->
+<main class="flex-1 px-4 pt-3 pb-24 space-y-4 overflow-y-auto">
+<!-- 2. View Toggle & Compact Horizontal Week Strip -->
+<section class="space-y-3">
+<!-- View Segmented Pill -->
+
+<!-- 7-Day Horizontal Strip -->
+
+</section>
+<!-- 3. Selected Day Summary Header -->
+<section class="flex items-center justify-between pt-1">
+<div>
+<h2 class="text-[20px] font-bold text-on-surface leading-tight">Wednesday, 24 Oct</h2>
+<p class="text-[13px] text-secondary font-medium mt-0.5">4 Deployments</p>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="tune">tune</span>
+<span class="text-[12px] font-semibold text-on-surface">Filter</span>
+</div>
+</section>
+<!-- 4. Deployment Cards -->
+<section class="space-y-3.5">
+<!-- Card 1: JCB 3DX Heavy Loader (En Route) -->
+<article class="bg-[#f5f5f5] rounded-2xl border border-[#e5e5ea] p-4 shadow-sm hover:shadow transition-shadow">
+<!-- Top Row: Time & Status -->
+<div class="flex items-center justify-between pb-3 border-b border-[#e5e5ea]/80">
+<div class="flex items-center gap-1.5 text-[13px] font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="schedule">schedule</span>
+<span>08:00 AM – 04:00 PM</span>
+<span class="text-secondary font-normal text-[12px]">(1 Shift)</span>
+</div>
+<!-- Status Badge -->
+
+</div>
+<!-- Equipment Row -->
+<div class="flex items-center gap-3.5 my-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest border border-[#e5e5ea] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px] text-[#1c1c1e]" data-icon="front_loader">front_loader</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h3 class="text-[16px] font-bold text-on-surface truncate">JCB 3DX Heavy Loader</h3>
+
+</div>
+<p class="text-[13px] font-medium text-secondary tracking-wide mt-0.5">Reg: #MH-02-CB-4891</p>
+</div>
+</div>
+<!-- Site & Operator Details -->
+<div class="space-y-1.5 py-2.5 px-3 bg-surface-container-lowest/80 rounded-xl border border-[#e5e5ea]/60 text-[13px]">
+<div class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[17px] text-secondary mt-0.5 shrink-0" data-icon="location_on">location_on</span>
+<span class="font-medium leading-snug">Santacruz SV Road Ext • Gate 3</span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[17px] text-secondary shrink-0" data-icon="badge">badge</span>
+<span class="text-on-surface font-medium">Operator: Ramesh Solanki</span>
+</div>
+
+</div>
+</div>
+<!-- Action Row -->
+<div class="grid grid-cols-2 gap-2 mt-3 pt-1">
+
+
+</div>
+</article>
+<!-- Card 2: 16-Ton Tipper Dumper (DRIVER NEEDED - High Attention Priority) -->
+
+<!-- Card 3: Heavy Excavator EX200 (Assigned) -->
+<article class="bg-[#f5f5f5] rounded-2xl border border-[#e5e5ea] p-4 shadow-sm hover:shadow transition-shadow">
+<!-- Top Row: Time & Status -->
+<div class="flex items-center justify-between pb-3 border-b border-[#e5e5ea]/80">
+<div class="flex items-center gap-1.5 text-[13px] font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="schedule">schedule</span>
+<span>11:00 AM – 07:00 PM</span>
+</div>
+<!-- Status Badge: Subtle Blue -->
+
+</div>
+<!-- Equipment Row -->
+<div class="flex items-center gap-3.5 my-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest border border-[#e5e5ea] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px] text-[#1c1c1e]" data-icon="construction">construction</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h3 class="text-[16px] font-bold text-on-surface truncate">Tata Hitachi EX200</h3>
+
+</div>
+<p class="text-[13px] font-medium text-secondary tracking-wide mt-0.5">Reg: #MH-02-AX-1092</p>
+</div>
+</div>
+<!-- Site & Operator Details -->
+<div class="space-y-1.5 py-2.5 px-3 bg-surface-container-lowest/80 rounded-xl border border-[#e5e5ea]/60 text-[13px]">
+<div class="flex items-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[17px] text-secondary mt-0.5 shrink-0" data-icon="location_on">location_on</span>
+<span class="font-medium leading-snug">Dharavi Link Road Desilting</span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[17px] text-secondary shrink-0" data-icon="badge">badge</span>
+<span class="text-on-surface font-medium">Operator: Sunil Jadhav</span>
+</div>
+
+</div>
+</div>
+<!-- Action Row -->
+<div class="grid grid-cols-2 gap-2 mt-3 pt-1">
+
+
+</div>
+</article>
+</section>
+<!-- 5. Maintenance Reminder Strip -->
+<section class="py-1">
+
+</section>
+</main>
+<!-- 6. Bottom Navigation Bar (Shared Component: BottomNavBar compliant) -->
+<!-- Active State: 'Schedule' selected with primary dot indicator -->
+<nav class="fixed bottom-0 left-0 w-full z-50 h-16 flex justify-around items-center px-4 bg-surface-container-lowest border-t border-surface-container-high/40 shadow-lg max-w-md mx-auto right-0">
+<!-- Tab 1: Requests -->
+<button class="flex flex-col items-center justify-center text-secondary font-medium gap-1 flex-1 py-1 hover:bg-surface-container-low transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="assignment">assignment</span>
+<span class="text-[12px] font-medium leading-none">Requests</span>
+</button>
+<!-- Tab 2: Schedule (ACTIVE) -->
+<button class="flex flex-col items-center justify-center text-on-surface font-semibold gap-1 relative after:w-1.5 after:h-1.5 after:bg-primary-container after:rounded-full after:mt-0.5 flex-1 py-1 active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px] text-on-surface font-bold" data-icon="calendar_today" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_today</span>
+<span class="text-[12px] font-bold leading-none text-on-surface">Schedule</span>
+</button>
+<!-- Tab 3: Fleet -->
+<button class="flex flex-col items-center justify-center text-secondary font-medium gap-1 flex-1 py-1 hover:bg-surface-container-low transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="text-[12px] font-medium leading-none">Fleet</span>
+</button>
+<!-- Tab 4: Profile -->
+<button class="flex flex-col items-center justify-center text-secondary font-medium gap-1 flex-1 py-1 hover:bg-surface-container-low transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="text-[12px] font-medium leading-none">Profile</span>
+</button>
+</nav>
+</div>
+
+
+
+
+</body></html>
