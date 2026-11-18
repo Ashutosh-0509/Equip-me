@@ -330,9 +330,10 @@ export default function OfficerRequests({ initialFilter, onNavigateToVerificatio
                 Live Transit Corridor & Geofence (Milan Subway / SV Road)
               </label>
               <SiteLocationMap
+                address={telematicsModalBooking.address || 'Plot 42-B, SV Road Extension, Opp. Milan Subway, Santacruz (West), Mumbai'}
                 mode="route"
                 height="h-[210px]"
-                caption="Transit Corridor: Bandra Depot → Santacruz Gate 3"
+                caption={telematicsModalBooking.address || 'Transit Corridor: Bandra Depot → Santacruz Gate 3'}
               />
             </div>
 

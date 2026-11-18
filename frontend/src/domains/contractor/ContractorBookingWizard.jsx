@@ -236,13 +236,16 @@ export default function ContractorBookingWizard({
           </div>
         )}
 
-        {/* STEP 2: SITE LOCATION (Interactive Leaflet Map & Stitch Design) */}
+        {/* STEP 2: SITE LOCATION (Google Maps API & Stitch Design) */}
         {step === 2 && (
           <div className="space-y-4">
-            {/* Interactive Leaflet Map API */}
+            {/* Google Maps API Component */}
             <SiteLocationMap
+              address={address}
               initialLat={parseFloat(latitude) || 19.0830}
               initialLng={parseFloat(longitude) || 72.8370}
+              height="h-[280px]"
+              caption={address}
               onLocationChange={({ lat, lng, address: newAddr }) => {
                 setAddress(newAddr);
                 setLatitude(lat);
@@ -250,24 +253,48 @@ export default function ContractorBookingWizard({
               }}
             />
 
-            {/* Site Address Container */}
-            <div className="bg-white p-3.5 rounded-xl border border-[#E5E5EA] shadow-xs space-y-2">
+            {/* Site Address Container with live update to Google Map */}
+            <div className="bg-white p-3.5 rounded-xl border border-[#E5E5EA] shadow-xs space-y-2.5">
               <div className="flex items-center justify-between">
-                <span className="text-[13px] font-bold text-[#1C1C1E]">Site Address</span>
-                <button
-                  type="button"
-                  onClick={() => alert('Coordinates: 19.0830° N, 72.8370° E (Milan Subway Junction)')}
-                  className="text-[11px] font-semibold text-[#1C1C1E] hover:text-[#7E5700] flex items-center space-x-1"
-                >
-                  <span>Edit Coordinates</span>
-                </button>
+                <span className="text-[13px] font-bold text-[#1C1C1E] flex items-center gap-1.5">
+                  <MapPin size={14} className="text-[#FFB400]" />
+                  <span>Site Address (Updated on Google Maps)</span>
+                </span>
+                <span className="text-[10px] font-mono text-[#6B6B6B]">Ward H/West</span>
               </div>
               <textarea
                 rows={2}
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="w-full text-[13px] font-normal text-[#1C1C1E] leading-relaxed bg-[#F5F5F5] border border-[#E5E5EA] rounded-xl p-2.5 focus:outline-none focus:ring-1 focus:ring-[#FFB400]"
+                placeholder="Enter site deployment address..."
+                className="w-full text-[13px] font-medium text-[#1C1C1E] leading-relaxed bg-[#F5F5F5] border border-[#E5E5EA] rounded-xl p-2.5 focus:outline-none focus:ring-1 focus:ring-[#FFB400]"
               />
+
+              {/* Quick Municipal Address Suggestions */}
+              <div className="pt-1">
+                <span className="text-[10px] font-bold text-[#6B6B6B] block mb-1">Quick Select Municipal Sites:</span>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    'Plot 42-B, SV Road Extension, Opp. Milan Subway, Santacruz (West), Mumbai 400054',
+                    'Bandra Municipal Yard, S.V. Road, Bandra West, Mumbai 400050',
+                    'Dharavi Link Road Desilting Works, Sector 5, Mumbai 400017',
+                    'Kurla West Municipal Heavy Machinery Depot, Mumbai 400070',
+                  ].map((loc, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setAddress(loc)}
+                      className={`text-[10px] font-medium px-2 py-1 rounded-lg border transition-all ${
+                        address === loc
+                          ? 'bg-[#1C1C1E] text-[#FFB400] border-[#1C1C1E]'
+                          : 'bg-[#F5F5F5] text-[#1C1C1E] border-[#E5E5EA] hover:bg-gray-200'
+                      }`}
+                    >
+                      {loc.split(',')[0]}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Work Order / Project Reference Container */}

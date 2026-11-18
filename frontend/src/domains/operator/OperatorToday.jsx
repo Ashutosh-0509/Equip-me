@@ -144,9 +144,10 @@ export default function OperatorToday({ onNavigateToStartCode, onNavigateToLiveS
               {(showMap || current.status === 'in_transit') && (
                 <div className="pt-1.5 border-t border-[#FFB400]/30">
                   <SiteLocationMap
+                    address={current.address || 'SV Road, Near Milan Subway Junction, Santacruz (W), Mumbai'}
                     mode="route"
-                    height="h-[160px]"
-                    caption="Transit Corridor: Bandra Depot → Santacruz Gate 3"
+                    height="h-[180px]"
+                    caption={`Route to: ${current.address || 'Santacruz Gate 3'}`}
                   />
                 </div>
               )}

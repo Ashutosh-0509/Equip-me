@@ -188,9 +188,10 @@ export default function ProviderEquipmentEdit({ initialData, onBack, onSaved }) 
           {/* Attractive Depot Coverage Map */}
           <div className="pt-1">
             <SiteLocationMap
+              address={depot || 'Bandra Municipal Yard, S.V. Road, Bandra West, Mumbai'}
               mode="depot"
-              height="h-[170px]"
-              caption="Dispatched from Bandra Municipal Yard"
+              height="h-[180px]"
+              caption={`Depot: ${depot || 'Bandra Municipal Yard'}`}
             />
           </div>
         </div>
