@@ -225,5 +225,31 @@ class TestUnifiedAPI(unittest.TestCase):
         self.assertEqual(end_res.status_code, 200)
         self.assertEqual(end_res.json()["status"], "completed")
 
+    def test_unified_frontend_serving(self):
+        # 1. Root serves index.html
+        root_res = self.client.get("/")
+        self.assertEqual(root_res.status_code, 200)
+        self.assertIn("text/html", root_res.headers.get("content-type", ""))
+        self.assertIn("<div id=\"root\">", root_res.text)
+
+        # 2. Client-side SPA routes serve index.html
+        contractor_res = self.client.get("/contractor")
+        self.assertEqual(contractor_res.status_code, 200)
+        self.assertIn("<div id=\"root\">", contractor_res.text)
+
+        officer_res = self.client.get("/officer")
+        self.assertEqual(officer_res.status_code, 200)
+        self.assertIn("<div id=\"root\">", officer_res.text)
+
+        # 3. Static asset serving
+        static_img = self.client.get("/assets/machinery/excavator.jpg")
+        self.assertEqual(static_img.status_code, 200)
+        self.assertIn("image/jpeg", static_img.headers.get("content-type", ""))
+
+        # 4. Direct API health
+        api_health = self.client.get("/api/health")
+        self.assertEqual(api_health.status_code, 200)
+        self.assertEqual(api_health.json()["status"], "healthy")
+
 if __name__ == "__main__":
     unittest.main()

@@ -2,7 +2,14 @@
   "name": "equip-me",
   "version": "1.0.0",
   "private": true,
+  "description": "Equip-Me: Unified Four-Domain Application for Heavy Machinery Operations",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build"
+    "build": "cd frontend && npm install && npm run build",
+    "start": "python main.py",
+    "dev": "python main.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "python main.py",
+    "test:backend": "pytest",
+    "test:frontend": "cd frontend && npm run build"
   }
 }

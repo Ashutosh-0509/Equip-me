@@ -95,59 +95,67 @@ sequenceDiagram
 
 ---
 
-## 4. How to Run the Application
+## 4. How to Run the Unified Application
 
 ### Prerequisites
 - **Python**: 3.10+ (tested on Python 3.13)
 - **Node.js**: 18+ (tested on Node v22)
 
-### Step 1: Start the Backend API (FastAPI)
+### Single-Command Unified Run (Frontend + Backend on One Port)
 
-1. Open a terminal in the project root:
+1. Install backend requirements and build the frontend:
    ```bash
-   pip install -r backend/requirements.txt
+   pip install -r requirements.txt
+   npm run build
    ```
-2. Start the FastAPI development server:
+2. Start the unified application:
    ```bash
-   uvicorn backend.app.main:app --reload --port 8000
+   python main.py
    ```
-3. Verify the backend is running by opening:
-   - API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
-   - Health Check: [http://localhost:8000/api/shared/health](http://localhost:8000/api/shared/health)
+   Or using npm:
+   ```bash
+   npm start
+   ```
+3. Open your browser:
+   - **Unified Application & UI**: [http://localhost:8000](http://localhost:8000)
+   - **Swagger API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
+   - **API Health**: [http://localhost:8000/api/health](http://localhost:8000/api/health)
 
-### Step 2: Start the Frontend Interface (React + Vite)
+---
 
-1. Open a second terminal and navigate to `frontend/`:
+### Development Mode (with Live Hot Module Reloading)
+
+If you are developing frontend components with live HMR:
+
+1. In Terminal 1 (Backend API):
    ```bash
-   cd frontend
-   npm install
-   npm run dev
+   python main.py
    ```
-2. Open your browser at:
-   - Application URL: [http://localhost:5173](http://localhost:5173)
+2. In Terminal 2 (Frontend with Vite Proxy):
+   ```bash
+   npm run dev:frontend
+   ```
+   Open [http://localhost:5173](http://localhost:5173). The Vite dev server automatically proxies all `/api/*` requests to `:8000`.
 
 ---
 
 ## 5. Running Automated Tests
 
-Run the backend integration test suite verifying the complete 4-domain lifecycle:
+Run the full unified test suite verifying frontend serving, static assets, and complete 4-domain lifecycle:
 
 ```bash
-python -m unittest backend/tests/test_api_integration.py
+pytest
+```
+Or:
+```bash
+npm run test:backend
 ```
 
 Expected output:
 ```text
-Ran 4 tests in 0.337s
-OK
+backend\tests\test_api_integration.py .......                            [100%]
+7 passed in 1.66s
 ```
-
-To test the frontend production build:
-```bash
-cd frontend
-npm run build
-```
-Builds cleanly with zero errors in ~6 seconds.
 
 ---
 
