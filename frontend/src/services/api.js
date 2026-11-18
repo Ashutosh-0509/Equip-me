@@ -1,3 +1,5 @@
+import { localBackend } from './localBackend';
+
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 async function request(endpoint, options = {}) {
@@ -9,20 +11,16 @@ async function request(endpoint, options = {}) {
 
   try {
     const res = await fetch(url, { ...options, headers });
-    if (!res.ok) {
-      let errorMsg = `HTTP Error ${res.status}`;
-      try {
-        const errJson = await res.json();
-        errorMsg = errJson.detail || errorMsg;
-      } catch (e) {
-        // fallback
-      }
-      throw new Error(errorMsg);
+    if (res.ok) {
+      return await res.json();
     }
-    return await res.json();
+    // If backend returns 404 or server error (e.g. backend not deployed on static host)
+    console.warn(`[Equip-Me API] Backend responded with HTTP ${res.status} on ${endpoint}. Using client-side state engine.`);
+    return localBackend.handle(endpoint, options);
   } catch (err) {
-    console.error(`API Error on ${endpoint}:`, err);
-    throw err;
+    // If network connection failed (e.g. offline, frontend-only deployment)
+    console.warn(`[Equip-Me API] Connection to backend failed on ${endpoint}. Using client-side state engine:`, err.message);
+    return localBackend.handle(endpoint, options);
   }
 }
 
