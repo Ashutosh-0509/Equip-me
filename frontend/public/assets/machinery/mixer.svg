@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <!-- Clean Isolated Transit Concrete Mixer (Site Yellow & Charcoal) -->
+  <rect width="200" height="150" fill="#F8F9FA" rx="12"/>
+  <g transform="translate(15, 15)">
+    <!-- Chassis -->
+    <rect x="25" y="86" width="125" height="10" fill="#1C1C1E" rx="2"/>
+    
+    <!-- Cabin (Front) -->
+    <path d="M 116 50 L 138 50 L 148 72 L 148 90 L 116 90 Z" fill="#FFB400" stroke="#1C1C1E" stroke-width="2"/>
+    <path d="M 122 54 L 135 54 L 144 70 L 122 70 Z" fill="#E5F3FF" stroke="#1C1C1E" stroke-width="1.5"/>
+    <rect x="146" y="82" width="6" height="5" fill="#FFE58F" rx="1"/>
+    
+    <!-- Rotating Mixer Drum (Angle tilted) -->
+    <g transform="rotate(-15 65 65)">
+      <!-- Oval Barrel Drum -->
+      <ellipse cx="65" cy="65" rx="38" ry="22" fill="#E4E4E7" stroke="#1C1C1E" stroke-width="2"/>
+      <!-- Drum Spiral Blades lines -->
+      <path d="M 38 65 Q 65 50 92 65" fill="none" stroke="#FFB400" stroke-width="3"/>
+      <path d="M 45 72 Q 70 58 85 75" fill="none" stroke="#A1A1AA" stroke-width="2"/>
+    </g>
+    
+    <!-- Discharge Chute at rear -->
+    <path d="M 22 68 L 14 74 L 16 80 L 26 74 Z" fill="#FFB400" stroke="#1C1C1E" stroke-width="1.5"/>
+    <path d="M 14 74 L 6 86 L 10 88 L 18 78 Z" fill="#1C1C1E"/>
+    
+    <!-- Wheels -->
+    <circle cx="42" cy="98" r="14" fill="#1C1C1E"/>
+    <circle cx="42" cy="98" r="7" fill="#A1A1AA" stroke="#1C1C1E" stroke-width="1.5"/>
+    
+    <circle cx="72" cy="98" r="14" fill="#1C1C1E"/>
+    <circle cx="72" cy="98" r="7" fill="#A1A1AA" stroke="#1C1C1E" stroke-width="1.5"/>
+    
+    <circle cx="132" cy="98" r="14" fill="#1C1C1E"/>
+    <circle cx="132" cy="98" r="7" fill="#A1A1AA" stroke="#1C1C1E" stroke-width="1.5"/>
+  </g>
+</svg>

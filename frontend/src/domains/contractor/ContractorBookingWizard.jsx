@@ -19,6 +19,7 @@ export default function ContractorBookingWizard({
       description: 'Loader + Backhoe · 1.2 m³ bucket',
       rate: 1450,
       quantity: 2,
+      image: '/assets/machinery/backhoe.svg',
     }
   );
 
@@ -118,8 +119,15 @@ export default function ContractorBookingWizard({
             <div className="bg-[#F5F5F5] rounded-2xl border border-[#E5E5EA] p-3.5 space-y-3">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E5E5EA] flex items-center justify-center text-[#1C1C1E] shrink-0">
-                    <Truck size={22} className="text-[#7E5700]" />
+                  <div className="w-14 h-14 rounded-xl bg-white border border-[#E5E5EA] flex items-center justify-center p-1.5 shrink-0 overflow-hidden">
+                    <img
+                      src={equipment.image || '/assets/machinery/backhoe.svg'}
+                      alt={equipment.name}
+                      onError={(e) => {
+                        e.target.src = '/placeholder.svg';
+                      }}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold text-[#1C1C1E]">{equipment.name}</h3>

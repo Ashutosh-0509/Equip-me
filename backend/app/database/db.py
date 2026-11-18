@@ -12,7 +12,7 @@ CATALOGUE = [
         "description": "20T · Heavy digging & trenches",
         "rate": 1850.0,
         "provider_id": "provider-1",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAxODQnmf-_a6axH59jg-14YDySxIbycVMUIN7SRi2R5rZtDoM4cNRiyOgLkIsRzWIraLJSeAUHq0gE-42xsIRw9NV65FkSl0HF3b9ByHv5jvw-0w0yK4wwCBF5ICU3GSzYAFMOhaTrn5KpG_Ax58-l_Pb0dhDDmPFP2QpnWl_PP0BwpBqI9D_sA1gPkB_79McpnEmNF_N2wvSwuCIP3G9Yd52pNUxLID-6tyk4yv8vqbufIyfq-j4",
+        "image": "/assets/machinery/excavator.svg",
     },
     {
         "id": "eq-2",
@@ -21,7 +21,7 @@ CATALOGUE = [
         "description": "Loader + Backhoe multi-use",
         "rate": 1450.0,
         "provider_id": "provider-1",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAlnSwNa5hpT93V59TjeNyCMTX1Xfzh5VqKvKcaqKx9M8PlyuXdGVNA-MQd-2dY39st7o7YtBCVP7hrBHJoMbtxdjwYNBZXTTzmzh7nX69-q9wrOQutK9yqzt9cp97HbU9o1o6a7uEnNqdwEfUCvdQgdmex-qjZGWiqNPCCH5-IUBEPycOfQBw6mK8T3xhMDG4pnWsRv3sR6qf-nYEbfm_ArmYcLGx7Zq7aJuBLvA",
+        "image": "/assets/machinery/backhoe.svg",
     },
     {
         "id": "eq-3",
@@ -30,7 +30,7 @@ CATALOGUE = [
         "description": "Muck & debris haulage",
         "rate": 1100.0,
         "provider_id": "provider-1",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB6pCbpqficl0E3CtSSd9pGjLpuLdKgCgsUM0sL2KaW0bOCZx65TdgKuuHkUdKqdDVuRRdj5maD3disW_7xitCYdAaVCEWlQSJAzYHvaZu4NySSuo673Oo8FoSt_d2SL9Mhayfr-0RNsiMbT3DKGHVpqKx_E5UbOQWzQWNL_s3fl6zneSoAFp-VQqC6J8Cn3QF-2FvYpy3GugHlDzHuYN_sp9FxP1WDGLEhhX-p6g",
+        "image": "/assets/machinery/tipper.svg",
     },
     {
         "id": "eq-4",
@@ -39,7 +39,7 @@ CATALOGUE = [
         "description": "11T Vibratory roller",
         "rate": 1150.0,
         "provider_id": "provider-1",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyTX5SyMqsdOSH2Sn6I1pmqqk1XuP7yI2XAo9JcBy5mdzpJpJDlzIxSDb2WL7Bo2P24dqU6M9LXMWbdp4nlUaN6UuzsAPVnLyTaPv2aMp8zoK9ZmLAJyoskduyESApQ2jQGIhBY4cuh3KZn83nUBtHYNrSBsIaY4pzhLvvzSHtynYlAz6p7G3cEb7g2oBOUqnF8qJ_kHJzox6QVzUtZ27CLMcLna9caVlXl-hvFg",
+        "image": "/assets/machinery/compactor.svg",
     },
     {
         "id": "eq-5",
@@ -48,7 +48,7 @@ CATALOGUE = [
         "description": "6 cu.m RMC Batching",
         "rate": 1250.0,
         "provider_id": "provider-1",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCsdg-bu4_R20NmKzGy_qGMgVzM_yudhg0SuaBBIEz0uZxcOV6rLzExvuTWLDkocDQ12yEu2FN3IL6HosbCLzwye2_utl1MnFFVx_3mMcjaNe0dQldz2UAgGmNh54IVUcJzcN_RnExaPuLr3UO65zd8abhTYSIUvGuL-uNqtpkK4veXhpE-5m6QbfQXJ41oL0oaaioPSSWE7fVOMVp-bseNdg-xjeamKGeeQh48lw",
+        "image": "/assets/machinery/mixer.svg",
     },
     {
         "id": "eq-6",
@@ -57,7 +57,7 @@ CATALOGUE = [
         "description": "14T Girder & Precast Lift",
         "rate": 2150.0,
         "provider_id": "provider-1",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDMpkrAgFIa8g0lhMZIffe0zEsi2-_47b0CYbgQ5YVzaMuZ7jlQyRdyCNO4HnKriNwo3IHGqqmyeRcClgriu_x2pvoLkuWVxc134efly8kpEuZ2L8EGN9lj-r56SVnXq9fYE-e7EM1YfLGOtQWWr7bY4NkGXSIxxWMXi-35mqG8kmikF8R5DUIT2gxrmQ0jNG2oSiUkpPxdTt4wK90r3UdqBIFcSZr4jD24jUB6BA",
+        "image": "/assets/machinery/crane.svg",
     },
 ]
 

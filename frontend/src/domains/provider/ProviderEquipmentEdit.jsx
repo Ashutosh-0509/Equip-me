@@ -63,17 +63,15 @@ export default function ProviderEquipmentEdit({ initialData, onBack, onSaved }) 
         <div className="flex items-center bg-[#F5F5F7] p-1 rounded-xl">
           <button
             onClick={() => setTab('add')}
-            className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${
-              tab === 'add' ? 'bg-white text-text-primary shadow-xs' : 'text-text-secondary'
-            }`}
+            className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${tab === 'add' ? 'bg-white text-text-primary shadow-xs' : 'text-text-secondary'
+              }`}
           >
             Add New Machine
           </button>
           <button
             onClick={() => setTab('edit')}
-            className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${
-              tab === 'edit' ? 'bg-white text-text-primary shadow-xs' : 'text-text-secondary'
-            }`}
+            className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${tab === 'edit' ? 'bg-white text-text-primary shadow-xs' : 'text-text-secondary'
+              }`}
           >
             Edit Existing
           </button>
@@ -88,11 +86,10 @@ export default function ProviderEquipmentEdit({ initialData, onBack, onSaved }) 
                 key={c}
                 type="button"
                 onClick={() => setCategory(c)}
-                className={`py-2 px-3 rounded-xl border text-xs font-semibold text-left transition-all ${
-                  category === c
+                className={`py-2 px-3 rounded-xl border text-xs font-semibold text-left transition-all ${category === c
                     ? 'border-[#FFB400] bg-[#FFF7E6] text-[#7E5700] font-bold'
                     : 'border-border-subtle bg-surface text-text-secondary'
-                }`}
+                  }`}
               >
                 {c}
               </button>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <!-- Clean Isolated 16-Ton Tipper Truck (Site Yellow & Charcoal) -->
+  <rect width="200" height="150" fill="#F8F9FA" rx="12"/>
+  <g transform="translate(15, 15)">
+    <!-- Chassis -->
+    <rect x="25" y="86" width="125" height="10" fill="#1C1C1E" rx="2"/>
+    
+    <!-- Cabin (Front) -->
+    <path d="M 112 50 L 138 50 L 148 72 L 148 90 L 112 90 Z" fill="#FFB400" stroke="#1C1C1E" stroke-width="2"/>
+    <!-- Windshield & Window -->
+    <path d="M 120 54 L 135 54 L 144 70 L 120 70 Z" fill="#E5F3FF" stroke="#1C1C1E" stroke-width="1.5"/>
+    <!-- Headlight & Bumper -->
+    <rect x="146" y="82" width="6" height="5" fill="#FFE58F" rx="1"/>
+    <rect x="142" y="88" width="12" height="7" fill="#1C1C1E" rx="1"/>
+    
+    <!-- Dump Tipper Bed (Rear) -->
+    <path d="M 22 46 L 108 46 L 105 84 L 25 84 Z" fill="#3A3A3C" stroke="#1C1C1E" stroke-width="2"/>
+    <!-- Reinforcement Ribs on Dump Bed -->
+    <line x1="38" y1="48" x2="39" y2="82" stroke="#52525B" stroke-width="2"/>
+    <line x1="56" y1="48" x2="57" y2="82" stroke="#52525B" stroke-width="2"/>
+    <line x1="74" y1="48" x2="75" y2="82" stroke="#52525B" stroke-width="2"/>
+    <line x1="92" y1="48" x2="93" y2="82" stroke="#52525B" stroke-width="2"/>
+    <!-- High-vis reflective stripe -->
+    <rect x="24" y="80" width="80" height="3" fill="#FFB400"/>
+    
+    <!-- Wheels (Front & Tandem Rear) -->
+    <!-- Rear Wheel 1 -->
+    <circle cx="42" cy="98" r="14" fill="#1C1C1E"/>
+    <circle cx="42" cy="98" r="7" fill="#A1A1AA" stroke="#1C1C1E" stroke-width="1.5"/>
+    <circle cx="42" cy="98" r="2.5" fill="#1C1C1E"/>
+    
+    <!-- Rear Wheel 2 -->
+    <circle cx="72" cy="98" r="14" fill="#1C1C1E"/>
+    <circle cx="72" cy="98" r="7" fill="#A1A1AA" stroke="#1C1C1E" stroke-width="1.5"/>
+    <circle cx="72" cy="98" r="2.5" fill="#1C1C1E"/>
+    
+    <!-- Front Wheel -->
+    <circle cx="132" cy="98" r="14" fill="#1C1C1E"/>
+    <circle cx="132" cy="98" r="7" fill="#A1A1AA" stroke="#1C1C1E" stroke-width="1.5"/>
+    <circle cx="132" cy="98" r="2.5" fill="#1C1C1E"/>
+    
+    <!-- Fuel Tank -->
+    <rect x="92" y="88" width="22" height="10" rx="3" fill="#71717A" stroke="#1C1C1E" stroke-width="1.5"/>
+  </g>
+</svg>

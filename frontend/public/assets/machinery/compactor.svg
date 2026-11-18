@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <!-- Clean Isolated Soil Compactor / Road Roller (Site Yellow & Charcoal) -->
+  <rect width="200" height="150" fill="#F8F9FA" rx="12"/>
+  <g transform="translate(15, 15)">
+    <!-- Rear Body Engine Compartment -->
+    <rect x="25" y="66" width="60" height="24" rx="4" fill="#FFB400" stroke="#1C1C1E" stroke-width="2"/>
+    
+    <!-- Operator Canopy / ROPS Roll Bar -->
+    <path d="M 45 42 L 78 42 L 80 66 L 42 66 Z" fill="none" stroke="#1C1C1E" stroke-width="2.5"/>
+    <rect x="42" y="38" width="38" height="4" fill="#FFB400" rx="1"/>
+    <!-- Seat & Steering -->
+    <rect x="52" y="55" width="8" height="11" fill="#1C1C1E" rx="1"/>
+    <line x1="68" y1="52" x2="65" y2="66" stroke="#1C1C1E" stroke-width="2"/>
+    <circle cx="68" cy="50" r="3" fill="#1C1C1E"/>
+    
+    <!-- Articulation Joint -->
+    <circle cx="92" cy="78" r="5" fill="#1C1C1E"/>
+    
+    <!-- Front Steel Drum Frame -->
+    <path d="M 94 76 L 128 76 L 132 94 L 92 86 Z" fill="#FFB400" stroke="#1C1C1E" stroke-width="2"/>
+    
+    <!-- Front Vibratory Steel Drum -->
+    <circle cx="132" cy="94" r="18" fill="#71717A" stroke="#1C1C1E" stroke-width="2.5"/>
+    <circle cx="132" cy="94" r="14" fill="#A1A1AA"/>
+    <circle cx="132" cy="94" r="5" fill="#1C1C1E"/>
+    
+    <!-- Rear Pneumatic Compaction Tires -->
+    <circle cx="48" cy="95" r="16" fill="#1C1C1E"/>
+    <circle cx="48" cy="95" r="8" fill="#FFB400" stroke="#1C1C1E" stroke-width="1.5"/>
+    <circle cx="48" cy="95" r="3" fill="#1C1C1E"/>
+  </g>
+</svg>

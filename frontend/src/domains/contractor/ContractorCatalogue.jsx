@@ -109,15 +109,15 @@ export default function ContractorCatalogue({ onSelectEquipment, onProceedToBook
                       : 'border-border-subtle hover:border-gray-300 shadow-2xs'
                   }`}
                 >
-                  {/* Image */}
-                  <div className="relative aspect-4/3 bg-[#F5F5F7] overflow-hidden">
+                  {/* Clean Isolated Machinery Image */}
+                  <div className="relative aspect-4/3 bg-[#F8F9FA] overflow-hidden flex items-center justify-center p-2.5">
                     <img
                       src={eq.image}
                       alt={eq.name}
                       onError={(e) => {
                         e.target.src = '/placeholder.svg';
                       }}
-                      className="w-full h-full object-cover transition-transform hover:scale-105"
+                      className="w-full h-full object-contain"
                     />
                     {isSelected && (
                       <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-[#FFB400] text-[#1C1C1E] flex items-center justify-center shadow-xs">
@@ -181,27 +181,47 @@ export default function ContractorCatalogue({ onSelectEquipment, onProceedToBook
         )}
       </div>
 
-      {/* Floating Bottom Sticky Bar */}
+      {/* Selected Equipment Bottom Card (Exact match to Reference media_1795008872941_37704d0a.jpg) */}
       {selectedItem && (
-        <div className="fixed bottom-16 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md border-t border-border-subtle p-3 shadow-lg">
-          <div className="max-w-md mx-auto flex items-center justify-between gap-3">
+        <div className="sticky bottom-16 bg-white border-t border-[#E5E5EA] p-3.5 shadow-lg space-y-3 z-30">
+          <div className="flex items-center justify-between">
             <div>
-              <div className="text-xs font-bold text-text-primary">
-                {quantity}x {selectedItem.name}
-              </div>
-              <div className="text-[11px] text-text-secondary">
-                ₹{Number(selectedItem.rate * quantity * 8).toLocaleString('en-IN')} estimated / shift
+              <h3 className="text-sm font-bold text-[#1C1C1E]">{selectedItem.name}</h3>
+              <p className="text-[11px] text-[#6B6B6B] mt-0.5">{selectedItem.description}</p>
+              <div className="text-xs font-bold text-[#1C1C1E] mt-1">
+                ₹{Number(selectedItem.rate).toLocaleString('en-IN')}{' '}
+                <span className="text-[10px] text-[#6B6B6B] font-normal">/ hr</span>
               </div>
             </div>
 
-            <button
-              onClick={handleProceed}
-              className="h-11 px-5 bg-[#FFB400] hover:bg-[#E5A000] text-[#1C1C1E] font-bold text-xs rounded-xl flex items-center gap-1.5 shadow-sm active:scale-95 transition-all"
-            >
-              <span>Proceed to Booking Step 1</span>
-              <ArrowRight size={14} />
-            </button>
+            {/* Stepper with amber highlight */}
+            <div className="flex items-center gap-2 bg-[#FFF7E6] border border-[#FFB400]/40 rounded-xl px-2 py-1">
+              <button
+                type="button"
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className="w-7 h-7 flex items-center justify-center font-extrabold text-[#7E5700] hover:text-[#1C1C1E] active:scale-95"
+              >
+                −
+              </button>
+              <span className="text-sm font-extrabold text-[#1C1C1E] px-1">{quantity}</span>
+              <button
+                type="button"
+                onClick={() => setQuantity((q) => Math.min(10, q + 1))}
+                className="w-7 h-7 flex items-center justify-center font-extrabold text-[#7E5700] hover:text-[#1C1C1E] active:scale-95"
+              >
+                +
+              </button>
+            </div>
           </div>
+
+          <button
+            type="button"
+            onClick={handleProceed}
+            className="w-full h-12 bg-[#FFB400] hover:bg-[#E5A000] text-[#1C1C1E] font-bold text-sm rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all"
+          >
+            <span>Proceed to Booking Step 1</span>
+            <ArrowRight size={16} />
+          </button>
         </div>
       )}
     </div>
