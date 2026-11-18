@@ -11,15 +11,16 @@ async function request(endpoint, options = {}) {
 
   try {
     const res = await fetch(url, { ...options, headers });
-    if (res.ok) {
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
       return await res.json();
     }
-    // If backend returns 404 or server error (e.g. backend not deployed on static host)
-    console.warn(`[Equip-Me API] Backend responded with HTTP ${res.status} on ${endpoint}. Using client-side state engine.`);
+    // If backend returns 404, 500, or HTML (e.g. static hosting SPA fallback)
+    console.warn(`[Equip-Me API] Live backend returned HTTP ${res.status} (${contentType}) on ${endpoint}. Using persistent client engine.`);
     return localBackend.handle(endpoint, options);
   } catch (err) {
     // If network connection failed (e.g. offline, frontend-only deployment)
-    console.warn(`[Equip-Me API] Connection to backend failed on ${endpoint}. Using client-side state engine:`, err.message);
+    console.warn(`[Equip-Me API] Connection to backend failed on ${endpoint}. Using persistent client engine:`, err.message);
     return localBackend.handle(endpoint, options);
   }
 }

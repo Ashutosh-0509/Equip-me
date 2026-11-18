@@ -21,14 +21,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 1. Mount API routers under /api
+# 1. Mount API routers under /api (and root fallback for serverless runners)
 app.include_router(contractor.router, prefix=settings.API_PREFIX)
 app.include_router(provider.router, prefix=settings.API_PREFIX)
 app.include_router(operator.router, prefix=settings.API_PREFIX)
 app.include_router(officer.router, prefix=settings.API_PREFIX)
 app.include_router(shared.router, prefix=settings.API_PREFIX)
 
+# Also mount under root to support serverless environments that strip /api prefix
+app.include_router(contractor.router)
+app.include_router(provider.router)
+app.include_router(operator.router)
+app.include_router(officer.router)
+app.include_router(shared.router)
+
 # Direct health endpoint
+@app.get("/health", tags=["Shared"])
 @app.get("/api/health", tags=["Shared"])
 def api_health():
     return {
